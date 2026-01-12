@@ -106,5 +106,5 @@ Loginform.addEventListener("submit", function (e) {
 
   localStorage.setItem("tempEmail", EmailForgetValue);
 
-  window.location.href = "../confirmpassword.html";
+  window.location.href = "confirmpassword.html";
 });
