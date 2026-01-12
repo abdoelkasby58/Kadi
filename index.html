@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kadi | كادي</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./src/fonts/Zain-LightItalic.ttf">
+  </head>
+  <body>
+    <header class="nav-bar-login">
+      <div class="header-left">
+        <img src="./src/imgs/Kadi-logo.png" alt="Kadi-logo" />
+      </div>
+      <div class="header-right">
+        <label for="cars" class="language-icon"
+          ><iconify-icon
+            icon="material-symbols:language"
+            class="iconify-icon"
+           
+          ></iconify-icon>
+         
+        </label>
+
+        <select class="lan" id="selectindex">
+          <option value="eng" id="engindex" selected>EN</option>
+          <option value="arb" id="arbindex">AR</option>
+        </select>
+      </div>
+    </header>
+    <!-- Login -->
+    <section class="loginsec">
+      <section class="login">
+        <div class="login-title" id="login-title">
+          <h1 id="h1">Welcome Back</h1>
+          <p id="p">Enter your credentials to access your account</p>
+        </div>
+
+        <div id="error"></div>
+        <form action="" id="form" novalidate>
+          <div class="login-inp">
+            <label for="emailFiled" id="Emailindex" class="labelEmail"
+              >Email</label
+            >
+            <input
+              type="email"
+              spellcheck="false"
+              name="email"
+              id="emailFiled"
+              placeholder="Enter new email"
+            />
+            <span class="emailerror" id="emailerror"></span>
+
+            <label for="password" class="labelpassword" id="passwordindex"
+              >Password</label
+            >
+            <iconify-icon
+              class="visibilityoff"
+              id="visibility-off"
+              icon="material-symbols:visibility"
+              style="color: rgba(107, 114, 128, 1)"
+            >
+            </iconify-icon>
+
+            <iconify-icon
+              class="visibility"
+              id="visibility"
+              icon="material-symbols:visibility-off"
+              style="color: rgba(107, 114, 128, 1)"
+            ></iconify-icon>
+
+            
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter new password"
+              maxlength="15"
+            />
+
+            <span class="passwordError" id="passworderror"
+              >Enter password error</span
+            >
+            <span class="passwordErrorchar" id="passwordcharacters"
+              >Enter password error</span
+            >
+            <a href="forgetemail.html" id="linkforget">Forgot Password?</a>
+            <div class="login-btn">
+              <button class="btn-login" id="logout">Log in</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </section>
+    <script src="./js/auth.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+  </body>
+</html>

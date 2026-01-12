@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.loader {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader-image {
+  width: 250px;
+  animation: landing 1.5s ease-in infinite;
+  opacity: 1;
+}
+@keyframes landing {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.07;
+  }
+  60% {
+    opacity: 0.2;
+  }
+  70% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 1024px) {
+  .loader-image {
+    width: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .loader-image {
+    width: 100px;
+  }
+}

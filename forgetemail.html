@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kadi | كادي</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./src/fonts/Zain-LightItalic.ttf">
+  </head>
+  <body>
+    <header class="nav-bar-login">
+      <div class="header-left">
+        <img src="./src/imgs/Kadi-logo.png" alt="Kadi-logo" />
+      </div>
+      <div class="header-right">
+       <label for="cars" class="language-icon"
+          ><iconify-icon icon="material-symbols:language" class="iconify-icon"></iconify-icon></label>
+
+
+        <select id="language-selector"  class="lan">
+          <option value="en" id="ENG">EN</option>
+          <option value="ar" id="ARB">AR</option>
+        </select>
+      </div>
+    </header>
+    <!-- Login -->
+    <section class="loginsec">
+      <section class="login">
+        <div class="login-title">
+          <h1 id="h1forget">Forgot password?</h1>
+
+          <p id="pforget">Enter your email to reset password</p>
+        </div>
+        <div id="errorforget"></div>
+        <form id="loginForm" novalidate>
+          <div class="login-forget">
+            <!-- Input قابل للترجمة -->
+            <label for="loginEmail" class="labelforgetemail" id="emailforget">Email</label>
+            <input type="email" id="loginEmail" placeholder="Enter new email" />
+            <span class="errorforgett" id="emailerrorfor"
+              >Please enter a valid email.</span
+            >
+          </div>
+          <div class="login-btn-forget">
+            <button class="btn-login" id="btnforget">Log in</button>
+          </div>
+        </form>
+      </section>
+    </section>
+    <script src="./js/forget-email.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+
+  </body>
+</html>
