@@ -9,7 +9,7 @@ const content = {
     engindex: "En",
     arbindex: "AR",
     linkforget: `نسيت كلمة المرور؟`,
-    btn: `تسجيل الدخول`,
+    logout: `تسجيل الدخول`,
     Emailindex: `البريد الالكتروني`,
     passwordindex: `كلمه المرور`,
     emailerror: `يرجى إدخال بريد إلكتروني صحيح`,
@@ -26,7 +26,7 @@ const content = {
     engindex: "EN",
     arbindex: "AR",
     linkforget: `Forgot Password?`,
-    btn: `Log In`,
+    logout: `Log In`,
     Emailindex: `Email`,
     passwordindex: `Password`,
     emailerror: `Please enter a valid email`,
@@ -133,56 +133,53 @@ formEl.addEventListener("submit", function (event) {
   let emailValue = textEmail.value.trim().toLowerCase();
   let passwordValue = textPass.value.trim();
 
-  let email = emailValue.toLowerCase();
+  let email = emailValue;
   let domain = email.split("@")[1];
 
   let loginkadi = false;
 
-  if (
-    emailValue === "" ||
-    !emailRegex.test(emailValue) ||
-    !allowedDomains.includes(domain)
-  ) {
+  if (emailValue === "" || !emailRegex.test(emailValue) || !allowedDomains.includes(domain)) {
     emailerror.style.display = "block";
     loginkadi = true;
   } else {
     emailerror.style.display = "none";
-    loginkadi = false;
   }
-  if (passwordValue.length < 6 || passwordValue.length >= 15) {
-    passerror.style.color = "red";
-    passerror.style.display = "block";
-    loginkadi = true;
-  }
-  if (!passwordRegex.test(passwordValue)) {
+
+  if (passwordValue.length < 6 || passwordValue.length > 15 || !passwordRegex.test(passwordValue)) {
     passerror.style.display = "block";
     loginkadi = true;
   } else {
     passerror.style.display = "none";
   }
 
+  if (loginkadi) return;
+
+  // حفظ البيانات
+  localStorage.setItem("Email", emailValue);
+  localStorage.setItem("Password", passwordValue);
+  localStorage.setItem("isLoggedIn", "true");
+
+  window.location.href = "loading.html";
+});
+
+logout.addEventListener("click", () => {
   let savedEmail = localStorage.getItem("Email");
   let savedPassword = localStorage.getItem("Password");
+
+  let emailValue = textEmail.value.trim().toLowerCase();
+  let passwordValue = textPass.value.trim();
 
   if (!savedEmail || !savedPassword) {
     emailerror.style.display = "block";
     window.location.href = "forgetemail.html";
-    loginkadi = true;
-  } else {
-    emailerror.style.display = "none";
-    loginkadi = false;
+    return;
   }
 
   if (emailValue === savedEmail && passwordValue === savedPassword) {
     localStorage.setItem("isLoggedIn", "true");
     window.location.href = "loading.html";
-    loginkadi = true;
   } else {
-    // passerror.style.color = "red";
     emailerror.style.display = "block";
     passerror.style.display = "block";
-    loginkadi = false;
   }
-
-  if (loginkadi) return;
 });
