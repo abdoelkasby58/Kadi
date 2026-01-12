@@ -183,7 +183,7 @@ logout.addEventListener("click", () => {
 
   if (!savedEmail || !savedPassword) {
     emailerror.style.display = "block";
-    // window.location.href = "forgetemail.html";
+   
     return;
   }
 
