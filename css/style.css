@@ -87,6 +87,7 @@ html[lang="en"] {
   align-items: center;
   gap: 12px;
   padding-top: 161px;
+  padding-inline: 40px;
 }
 .login-title h1 {
   background-color: #ffffff;
@@ -353,6 +354,7 @@ display: none;
 } */
 .visibility,
 .visibilityoff {
+  background-color: transparent;
   color: rgba(107, 114, 128, 1);
   width: 21px;
   height: 20px;
@@ -408,6 +410,7 @@ display: none;
 
 .iconify-icon {
   font-size: 24px;
+  background-color: transparent;
 }
 @media (max-width: 600px) {
   .nav-bar-login {
