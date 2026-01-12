@@ -166,7 +166,7 @@ formEl.addEventListener("submit", function (event) {
 
   if (!savedEmail || !savedPassword) {
     emailerror.style.display = "block";
-    window.location.href = "../forgetemail.html";
+    window.location.href = "forgetemail.html";
     loginkadi = true;
   } else {
     emailerror.style.display = "none";
@@ -175,7 +175,7 @@ formEl.addEventListener("submit", function (event) {
 
   if (emailValue === savedEmail && passwordValue === savedPassword) {
     localStorage.setItem("isLoggedIn", "true");
-    window.location.href = "../loading.html";
+    window.location.href = "loading.html";
     loginkadi = true;
   } else {
     // passerror.style.color = "red";

@@ -146,13 +146,13 @@ FormConfirm.addEventListener(`submit`, function (event) {
   localStorage.setItem("passwordnew", Valuepass);
   localStorage.setItem("passwordconfirm", Valuepasstoo);
   if (Passregex) return;
-  window.location.href = `../index.html`;
+  window.location.href = `index.html`;
 
   let email = localStorage.getItem("tempEmail");
 
   if (!email) {
     emailError.style.display = "block";
-    window.location.href = "../forgetemail.html";
+    window.location.href = "forgetemail.html";
     return;
   }
 
@@ -162,5 +162,5 @@ FormConfirm.addEventListener(`submit`, function (event) {
   localStorage.removeItem("tempEmail");
 
   alert("تم إنشاء الحساب بنجاح");
-  window.location.href = "../index.html";
+  window.location.href = "index.html";
 });

@@ -1,3 +1,3 @@
 setTimeout(() => {
-  window.location.href = "../kadi.html";
+  window.location.href = "kadi.html";
 }, 2000);
