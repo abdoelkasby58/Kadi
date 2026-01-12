@@ -53,6 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
   Updateindex();
   // hideLang();
 });
+let linkforgetlink = document.getElementById(`linkforget`);
+linkforgetlink.addEventListener(`click`, () => {
+  window.location.href = `forgetemail.html`;
+});
 function Updateindex() {
   let Langindex = langSelctor.value;
 
@@ -138,14 +142,22 @@ formEl.addEventListener("submit", function (event) {
 
   let loginkadi = false;
 
-  if (emailValue === "" || !emailRegex.test(emailValue) || !allowedDomains.includes(domain)) {
+  if (
+    emailValue === "" ||
+    !emailRegex.test(emailValue) ||
+    !allowedDomains.includes(domain)
+  ) {
     emailerror.style.display = "block";
     loginkadi = true;
   } else {
     emailerror.style.display = "none";
   }
 
-  if (passwordValue.length < 6 || passwordValue.length > 15 || !passwordRegex.test(passwordValue)) {
+  if (
+    passwordValue.length < 6 ||
+    passwordValue.length > 15 ||
+    !passwordRegex.test(passwordValue)
+  ) {
     passerror.style.display = "block";
     loginkadi = true;
   } else {
@@ -171,7 +183,7 @@ logout.addEventListener("click", () => {
 
   if (!savedEmail || !savedPassword) {
     emailerror.style.display = "block";
-    window.location.href = "forgetemail.html";
+    // window.location.href = "forgetemail.html";
     return;
   }
 
