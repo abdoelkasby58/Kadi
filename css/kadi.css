@@ -180,7 +180,7 @@ p.animate {
   position: relative;
   width: 100%;
   height: auto;
-  background: url(../src/imgs/BG.png);
+  background: url(src/imgs/BG.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1203,7 +1203,7 @@ p.animate {
 }
 .panel-title::before {
   content: "";
-  background-image: url(../uploads/add.png);
+  background-image: url(src/imgs/add.png);
   background-position: center;
   background-size: contain;
   width: 25px;
@@ -1232,7 +1232,7 @@ p.animate {
 }
 .panel.active .panel-title::before {
   content: "";
-  background-image: url(../uploads/remove.png);
+  background-image: url(src/imgs/remove.png);
   background-position: center;
   background-size: contain;
   display: flex;
@@ -2279,7 +2279,7 @@ p.animate {
   .hero {
     width: 100%;
     height: 100%;
-    background: url(../src/imgs/IMG_6011.PNG);
+    background: url(src/imgs/IMG_6011.PNG);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2727,7 +2727,7 @@ p.animate {
   }
   .panel-title::before {
     content: "";
-    background-image: url(../uploads/add.png);
+    background-image: url(src/imgs/add.png);
     background-position: center;
     background-size: contain;
     width: 18.5px;
@@ -2761,7 +2761,7 @@ p.animate {
   }
   .panel.active .panel-title::before {
     content: "";
-    background-image: url(../uploads/remove.png);
+    background-image: url(src/imgs/remove.png);
     background-position: center;
     background-size: contain;
     display: flex;
@@ -3025,7 +3025,7 @@ p.animate {
   .hero {
     width: 100%;
     height: 100%;
-    background: url(../src/imgs/IMG_6011.PNG);
+    background: url(src/imgs/IMG_6011.PNG);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -3474,7 +3474,7 @@ p.animate {
   }
   .panel-title::before {
     content: "";
-    background-image: url(../uploads/add.png);
+    background-image: url(src/imgs/add.png);
     background-position: center;
     background-size: contain;
     width: 18.5px;
@@ -3508,7 +3508,7 @@ p.animate {
   }
   .panel.active .panel-title::before {
     content: "";
-    background-image: url(../uploads/remove.png);
+    background-image: url(src/imgs/remove.png);
     background-position: center;
     background-size: contain;
     display: flex;
