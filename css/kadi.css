@@ -3531,7 +3531,12 @@ p.animate {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 94px;
+    padding-top: 75px;
+    padding-inline: 0;
+  }
+  .footer-img-logo{
+    width: 130px;
+    height: 80px;
   }
   .footer-data {
     padding-top: 60px;
@@ -3578,6 +3583,7 @@ p.animate {
   }
   .footer-title-social {
     text-align: center;
+    font-size: 18px;
   }
   .contact-address {
     text-align: center;
@@ -3604,7 +3610,7 @@ p.animate {
   .contact-phone,
   .contact-email,
   .contact-address {
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 700;
     color: rgba(107, 114, 128, 1);
   }
