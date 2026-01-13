@@ -52,6 +52,8 @@ body.noscroll {
   font-weight: 500;
   transition: 0.3s ease;
   flex-direction: row-reverse;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .download-btn:hover {
@@ -1200,6 +1202,7 @@ p.animate {
   font-weight: 600;
   line-height: 150%;
   color: rgba(107, 114, 128, 1);
+  cursor: pointer;
 }
 .panel-title::before {
   content: "";
