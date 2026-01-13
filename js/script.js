@@ -107,7 +107,7 @@ linkforgetlink.addEventListener(`click`, () => {
 window.onload = function () {
   textEmail.focus();
 };
-textEmail.addEventListener(`input`, () => {
+textEmail.addEventListener(`input`, () => { 
   emailerror.style.display = `none`;
 });
 textPass.addEventListener(`input`, () => {
