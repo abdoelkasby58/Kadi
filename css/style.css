@@ -169,7 +169,7 @@ html[lang="en"] {
   position: absolute;
   font-size: 16px;
   text-decoration: none;
-  padding-top: 10px;
+  margin-top: 10px;
   bottom: 135px;
   /* top: 141px; */
   inset-inline-end: 0px;
@@ -265,7 +265,8 @@ html[lang="en"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 48px;
+  margin-top: 48px;
+  padding-top: 0;
   /* padding-bottom: 161px; */
 }
 .login-btn-confirm {
@@ -488,6 +489,7 @@ display: none;
     align-items: center;
     gap: 12px;
     padding-top: 80px;
+    padding-inline: 10px;
   }
   .login-title h1 {
     /* background-color: #ffffff; */
@@ -571,7 +573,7 @@ display: none;
     position: absolute;
     font-size: 11px;
     text-decoration: none;
-    padding-top: 10px;
+    margin-top: 10px;
     bottom: 80px;
     /* top: 141px; */
     inset-inline-end: 0px;
@@ -668,7 +670,8 @@ display: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 35px;
+    margin-top: 35px;
+    padding-top: 0;
     /* padding-bottom: 161px; */
   }
   .login-btn-confirm {
