@@ -2575,7 +2575,7 @@ p.animate {
   .tab {
     border: none;
     background: transparent;
-    padding: 10px 7px;
+    padding: 10px 0px;
     border-radius: 999px;
     font-size: 9px;
     cursor: pointer;
@@ -2717,7 +2717,7 @@ p.animate {
     transition: all 0.4s ease-in;
   }
   .panel-title {
-    padding: 33px 32px;
+    padding: 22px 32px;
     color: #2b2f36;
     position: relative;
     font-size: 14px;
@@ -3311,7 +3311,7 @@ p.animate {
     margin-top: 40px;
   }
   .tabs {
-    height: 45px;
+    height: 52px;
     position: relative;
     background: #f1f3f6;
     padding: 8px;
@@ -3320,16 +3320,17 @@ p.animate {
     gap: 6px;
   }
   .tab {
+    height: 38px;
     border: none;
     background: transparent;
-    padding: 10px 7px;
+    padding: 10px 0px;
     border-radius: 999px;
     font-size: 7px;
     cursor: pointer;
     color: #9aa1ad;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 3px;
     transition: all 0.3s ease;
   }
 
@@ -3456,7 +3457,7 @@ p.animate {
     align-items: center;
   }
   .panel {
-    margin: 16px 0px;
+    margin: 10px 0px;
     width: 85%;
     border: 1px solid rgba(220, 217, 217, 0.5);
     border-radius: 24px;
@@ -3464,10 +3465,10 @@ p.animate {
     transition: all 0.4s ease-in;
   }
   .panel-title {
-    padding: 33px 32px;
+    padding: 11px 22px;
     color: #2b2f36;
     position: relative;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 600;
     line-height: 150%;
     color: rgba(107, 114, 128, 1);
@@ -3477,8 +3478,8 @@ p.animate {
     background-image: url(../src/imgs/add.png);
     background-position: center;
     background-size: contain;
-    width: 18.5px;
-    height: 18.5px;
+    width: 14.5px;
+    height: 12.5px;
     border-radius: 50px;
     display: flex;
     justify-content: center;
@@ -3496,12 +3497,12 @@ p.animate {
     opacity: 0;
   }
   .panel.active {
-    padding-bottom: 15px;
+    padding-bottom: 5px;
   }
   .panel.active .panel-content {
-    padding: 13px 32px;
+    padding: 11px 21px;
     max-height: 50px;
-    font-size: 13px;
+    font-size: 9px;
     font-weight: 400;
     line-height: 140%;
     opacity: 0.7;
