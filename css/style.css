@@ -695,7 +695,7 @@ display: none;
   .emailerrorconfirm {
     background-color: transparent;
     position: absolute;
-    top: 134px;
+    top: 71px;
     inset-inline-end: 2px;
     color: red;
     font-size: 9px;
@@ -705,7 +705,7 @@ display: none;
   .emailerrorconfirmone {
     background-color: transparent;
     position: absolute;
-    bottom: 86px;
+    top: 133px;
     inset-inline-end: 2px;
     color: red;
     font-size: 9px;
