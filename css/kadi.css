@@ -2337,6 +2337,8 @@ hr {
     cursor: pointer;
   }
   .nav-bar-responsive-btn img {
+    width: 14.5px;
+    height: 14.5px;
     cursor: pointer;
   }
   .header-right-kadi {
@@ -2359,6 +2361,10 @@ hr {
     position: absolute;
     top: 75px;
     padding-inline: 19px;
+  }
+  .nav-bar-responsive-logo{
+    width: 95px;
+    height: 45px;
   }
   .header-center {
     display: block;
@@ -2408,7 +2414,7 @@ hr {
     width: 100%;
     height: 82px;
     position: absolute;
-    top: 630px;
+    top: 550px;
   }
   .box-social-too {
     display: grid;
