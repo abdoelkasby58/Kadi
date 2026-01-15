@@ -1717,6 +1717,18 @@ hr {
     background-color: transparent;
     /* background-color: #5b0fe7; */
   }
+  .kadi-home-dark-mode {
+  background-color: var(--bg-body);
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  transition: all 0.3s ease-in;
+}
   .kadi-home {
     margin-bottom: 0;
   }
@@ -2433,6 +2445,18 @@ hr {
     background-color: transparent;
     /* background-color: #5b0fe7; */
   }
+  .kadi-home-dark-mode {
+  background-color: var(--bg-body);
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  transition: all 0.3s ease-in;
+}
   .kadi-home {
     margin-bottom: 0;
   }
@@ -3195,6 +3219,18 @@ hr {
     background-color: transparent;
     /* background-color: #5b0fe7; */
   }
+  .kadi-home-dark-mode {
+  background-color: var(--bg-body);
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  transition: all 0.3s ease-in;
+}
   .kadi-home {
     margin-bottom: 0;
   }
