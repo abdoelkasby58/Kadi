@@ -90,12 +90,10 @@ tabButtons.forEach((button) => {
     });
     let addActive = button.classList.add("active");
     if (addActive) {
-   
     }
     let targetPage = pages[button.id];
     if (targetPage) {
       targetPage.style.display = "flex";
-
     }
   });
 });
@@ -127,6 +125,7 @@ closee.addEventListener("click", () => {
   containerMenu.style.maxHeight = "0px";
   navbarRes.style.display = "block";
   body.classList.remove("noscroll");
+  themeSwitch.style.display = "flex";
 });
 linkNavv.forEach((link) => {
   link.addEventListener("click", () => {
@@ -134,6 +133,7 @@ linkNavv.forEach((link) => {
     containerMenu.style.maxHeight = "0px";
     navbarRes.style.display = "block";
     containerMenu.classList.add("active");
+    themeSwitch.style.display = "flex";
   });
 });
 function toggleMenu() {
@@ -141,10 +141,12 @@ function toggleMenu() {
     containerMenu.classList.add("active");
     containerMenu.style.maxHeight = "100vh";
     navbarRes.style.display = "none";
+    themeSwitch.style.display = "none";
     body.classList.add("noscroll");
   } else {
     containerMenu.style.maxHeight = "0px";
     navbarRes.style.display = "block";
+    themeSwitch.style.display = "flex";
     body.classList.remove("noscroll");
   }
 }
@@ -172,5 +174,42 @@ Updateaccor();
     window.location.href = "index.html";
   }
 })();
+// // let DarkMode = document.getElementById(`darkmode`);
+let KadiHome = document.querySelector(".kadi-home");
+// let ligHt = document.querySelectorAll(".light-mode-icon");
+// let Dark = document.querySelectorAll(".dark-mode-icon");
+// let btnmode = document.querySelector(".dark-toggle");
+// // document.querySelector(".accordion-boxes").style.transition = "all 0,2s";
 
-// document.querySelector(".accordion-boxes").style.transition = "all 0,2s";
+// body.classList.remove("dark");
+// KadiHome.classList.add("kadi-home");
+// function modeUpdate() {
+//   if ((ligHt.style.display = "block")) {
+//     Dark.style.display = "none";
+//   } else {
+//     ligHt.style.display = "none";
+//     Dark.style.display = "flex";
+//   }
+// }
+// modeUpdate();
+let darkmode = localStorage.getItem(`darkmode`);
+let themeSwitch = document.getElementById(`theme-switch`);
+
+const enableDarkmode = () => {
+  document.body.classList.add(`darkmode`);
+  KadiHome.classList.remove("kadi-home");
+  KadiHome.classList.add("kadi-home-dark-mode");
+  localStorage.setItem(`darkmode`, `active`);
+};
+const disableDarkmode = () => {
+  document.body.classList.remove(`darkmode`);
+  KadiHome.classList.add("kadi-home");
+  KadiHome.classList.remove("kadi-home-dark-mode");
+  localStorage.setItem(`darkmode`, null);
+};
+if (darkmode === "active") enableDarkmode();
+
+themeSwitch.addEventListener("click", () => {
+  darkmode = localStorage.getItem(`darkmode`);
+  darkmode !== "active" ? enableDarkmode() : disableDarkmode();
+});

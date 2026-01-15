@@ -5,11 +5,158 @@
   font-family: "Noto Sans Arabic", sans-serif;
   line-height: 140%;
 }
+body {
+  background-color: var(--bg-body);
+
+  transition: background-color 0.3s ease-in-out, color 0.3s ease;
+}
+:root {
+  --bg-body: rgba(255, 255, 255, 0.4);
+  --text-color-: rgba(55, 65, 81, 1);
+  --text-color-small: rgba(107, 114, 128, 1);
+  --bg-color: #0f172a;
+  --hero-color: rgba(249, 250, 251, 1);
+  --hero-color-boxes: rgba(75, 85, 99, 1);
+  --border-tab: 0.8px solid rgba(209, 213, 219, 1);
+  --bg-color-tab: rgba(246, 248, 252, 1);
+  --btn-tab: rgba(237, 241, 249, 1);
+  --btn-color: rgba(100, 62, 150, 1);
+  --color-white: rgba(255, 255, 255, 1);
+  --tabs--color: rgba(237, 241, 249, 1);
+  --text-btn-tab: rgba(156, 163, 175, 1);
+  --text-btn-tab-hover: rgba(75, 85, 99, 1);
+  --bg-tab-btn-hover: rgba(255, 255, 255, 1);
+  --bg-scroll: rgb(57, 35, 88);
+  --bg-scroll-hover: rgb(57, 35, 88);
+  --tab-hover: #ffffff98;
+  --color-box-small: black;
+
+}
+
+.darkmode {
+  --color-box-small: rgb(255, 255, 255);
+  --tab-hover: rgba(29, 39, 56, 0.753);
+  --bg-body: rgba(17, 25, 44, 0.96);
+  --text-color-: rgba(229, 231, 235, 1);
+  --text-color-small: rgb(175, 182, 196);
+
+  --bg-color: #020617;
+
+  --hero-color: rgba(241, 245, 249, 1);
+  --hero-color-boxes: rgba(148, 163, 184, 1);
+
+  --border-tab: 0.8px solid rgba(51, 65, 85, 1);
+  --bg-color-tab: rgba(30, 41, 59, 1);
+
+  --btn-tab: rgba(51, 65, 85, 1);
+  /* --btn-color: rgba(168, 85, 247, 1); */
+
+  --color-white: rgba(15, 23, 42, 1);
+  --tabs--color: rgba(37, 48, 66, 0.76);
+  --bg-scroll: rgb(89, 66, 121);
+  --bg-scroll-hover: rgba(72, 44, 110, 0.658);
+  --text-btn-tab: rgba(148, 163, 184, 1);
+  --text-btn-tab-hover: rgba(226, 232, 240, 1);
+  --bg-tab-btn-hover: rgba(51, 65, 85, 1);
+}
+.scroll-up {
+  width: 45px;
+  height: 45px;
+  display: none;
+  border: 3px solid rgb(78 39 109);
+  background-color: var(--bg-scroll);
+  border-radius: 50%;
+  color: var(--color-white);
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  transition: all 0.3s ease;
+  z-index: 100000;
+  text-decoration: none;
+}
+.scroll-up:hover {
+  border: 3px solid rgb(37, 10, 59);
+  background-color: var(--bg-scroll-hover);
+  border-radius: 50%;
+  color: var(--color-white);
+  cursor: pointer;
+}
+.arrowup {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  font-size: 25px;
+  padding: 4px;
+}
+.arrow-icon {
+  width: 30px;
+  height: 35px;
+  color: black;
+}
+#theme-switch {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgb(57, 23, 85);
+  background-color: var(--bg-scroll);
+  border-radius: 50%;
+  color: var(--color-white);
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  transition: all 0.3s ease;
+  z-index: 100000;
+  text-decoration: none;
+}
+#theme-switch:hover {
+  border: 3px solid rgb(37, 10, 59);
+  background-color: var(--bg-scroll-hover);
+  border-radius: 50%;
+  color: var(--color-white);
+  cursor: pointer;
+}
+#theme-switch svg:last-child {
+  display: none;
+}
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
+/* 
+.dark-mode-icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  display: none;
+  color: var(--text-color-, #111);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.light-mode-icon {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  color: var(--text-color-, #111);
+  transition: color 0.3s ease, transform 0.3s ease;
+} */
+
 /* scroll */
 body.noscroll {
   overflow: hidden;
   overflow-y: hidden;
 }
+
 .container {
   width: 100%;
   height: 100%;
@@ -17,9 +164,9 @@ body.noscroll {
   margin: auto;
 }
 .header {
-  background-color: #fff;
+  background-color: var(--bg-body);
   width: 88%;
-  height: 80px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,8 +191,8 @@ body.noscroll {
   align-items: center;
   gap: 10px;
   padding: 14px 15px;
-  background: rgba(100, 62, 150, 1);
-  color: #fff;
+  background: var(--btn-color);
+  color: rgba(237, 241, 249, 1);
   border-radius: 32px;
   text-decoration: none;
   font-size: 14px;
@@ -57,7 +204,7 @@ body.noscroll {
 }
 
 .download-btn:hover {
-background: rgb(85, 48, 133);
+  background: rgb(85, 48, 133);
 }
 
 .icons {
@@ -79,6 +226,7 @@ background: rgb(85, 48, 133);
   display: none;
 }
 .menu-text {
+  color: var(--color-box-small);
   width: 33px;
   height: 20px;
 }
@@ -104,7 +252,7 @@ background: rgb(85, 48, 133);
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
-  color: rgba(107, 114, 128, 1);
+  color: var(--text-color-small);
   padding: 5px;
   line-height: 140%;
 }
@@ -178,20 +326,36 @@ p.animate {
 }
 
 /* kadi-home */
+.kadi-home-dark-mode {
+  background-color: var(--bg-body);
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  transition: all 0.3s ease-in;
+}
 .kadi-home {
+  /* background-color: var(--bg-body); */
   position: relative;
   width: 100%;
   height: auto;
   background: url(../src/imgs/BG.png);
+  /* mix-blend-mode: darken; */
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  animation: animation 0.3s 0.1s ease-in forwards;
   margin-bottom: 60px;
+  opacity: 0;
 }
+
 .kadi-home-content {
   width: 90%;
   height: 300px;
@@ -205,7 +369,7 @@ p.animate {
   align-items: center;
 }
 .kadi-home-content h1 {
-  color: rgba(60, 63, 79, 1);
+  color: var(--text-color-);
   font-weight: 700;
   font-size: 48px;
   line-height: 140%;
@@ -220,7 +384,7 @@ p.animate {
   font-style: normal;
 }
 .kadi-home-content p {
-  color: rgba(107, 114, 128, 1);
+  color: var(--text-color-small);
   text-align: center;
   font-size: 20px;
   font-weight: 500;
@@ -231,8 +395,8 @@ p.animate {
 .kadi-home-content button {
   outline: none;
   border: none;
-  background-color: #643e96;
-  color: #fff;
+  background-color: var(--btn-color);
+  color: rgba(237, 241, 249, 1);
   width: 214.589264px;
   height: 62.986702px;
   border-radius: 31.98px;
@@ -255,7 +419,7 @@ p.animate {
 
 .google-play-logo {
   object-fit: contain;
-  color: #fff;
+  color: var(--color-white);
   padding-left: 8px;
   border-left: rgba(229, 231, 235, 1) solid 1px;
 }
@@ -280,7 +444,7 @@ p.animate {
   height: auto;
   display: flex;
   justify-content: center;
-  background-color: #fff;
+  /* background-color: #fff; */
   z-index: -1;
 }
 .hero {
@@ -308,7 +472,7 @@ p.animate {
   padding-left: 554px;
 }
 .hero-title {
-  color: #fff;
+  color: var(--color-white);
   font-size: 38px;
   font-weight: 600;
   opacity: 0;
@@ -316,7 +480,8 @@ p.animate {
 .hero-description {
   font-size: 20px;
   font-weight: 500;
-  color: #fff;
+  color: var(--color-white);
+  padding-top: 24px;
   opacity: 0;
 }
 .hero-services {
@@ -331,17 +496,18 @@ p.animate {
   position: absolute;
   width: 100px;
   height: 100px;
-  background-color: #fff;
+  background-color: var(--color-white);
+  color: var(--text-color-);
   border-radius: 50%;
   display: grid;
   justify-items: center;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 6px 0px;
+  /* box-shadow: 0px 0px 6px 0px; */
 }
 .service-item-logo {
-  width: 38px;
-  height: 38px;
+  width: auto;
+  height: auto;
 }
 .service-item-text {
   font-size: 10px;
@@ -423,27 +589,28 @@ p.animate {
   margin-bottom: 80px;
 }
 .kadi-home-two__text {
-  height: 200px;
+  /* height: 200px; */
   margin-top: 120px;
   display: grid;
+  gap: 32px;
   align-items: center;
   align-content: space-evenly;
   justify-items: center;
 }
 .kadi-home-two__title {
-  color: rgba(60, 63, 79, 1);
+  color: var(--text-color-);
   font-size: 38px;
   font-weight: 800;
   line-height: 140%;
   opacity: 0;
 }
 .kadi-home-two__desc {
-  color: rgba(107, 114, 128, 1);
+  color: var(--text-color-small);
   text-align: center;
   line-height: 140%;
   font-size: 20px;
   font-weight: 500;
-  padding-inline: 165px;
+  padding-inline: 174px;
   opacity: 0;
 }
 
@@ -492,7 +659,7 @@ p.animate {
   height: 60px;
   border-radius: 499.76px;
   padding: 10px;
-  color: #fff;
+  color: var(--color-white);
   background: radial-gradient(
     circle at 50% 50%,
     rgb(54 23 97),
@@ -533,7 +700,7 @@ p.animate {
   height: 60px;
   border-radius: 499.76px;
   padding: 10px;
-  color: #fff;
+  color: var(--color-white);
   background: radial-gradient(
     circle at 50% 50%,
     rgb(54 23 97),
@@ -565,7 +732,7 @@ p.animate {
   color: rgba(100, 62, 150, 1);
 }
 .kadi-boxes-all:nth-child(2) .kadi-text-pragraph {
-  color: rgba(107, 114, 128, 1);
+  color: var(--text-color-small);
 }
 .kadi-boxes-all:nth-child(3) {
   background: linear-gradient(
@@ -591,7 +758,7 @@ p.animate {
   height: 60px;
   border-radius: 499.76px;
   padding: 10px;
-  color: #fff;
+  color: var(--color-white);
   background: radial-gradient(
     circle at 50% 50%,
     rgb(54 23 97),
@@ -618,7 +785,7 @@ p.animate {
   justify-content: center;
 }
 .kadi-image-box:nth-child(odd) {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: var(--color-white);
   width: 43px;
   height: 53px;
   margin: 5px;
@@ -642,7 +809,7 @@ p.animate {
   height: 3px;
 }
 .kadi-image-box:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: var(--color-white);
   width: 51px;
   height: 63px;
   margin-top: -10px;
@@ -685,10 +852,10 @@ p.animate {
   font-size: 16px;
   font-weight: 500;
   text-align: center;
-  color: rgba(107, 114, 128, 1);
+  color: var(--text-color-small);
 }
 .kadi-Administration {
-  background-color: rgba(246, 248, 252, 1);
+  background-color: var(--bg-color-tab);
   border-radius: 40px;
   width: 90%;
   margin: auto;
@@ -705,7 +872,7 @@ p.animate {
 .kadi-Administration-title__text {
   font-size: 38px;
   font-weight: 800;
-  color: rgba(55, 65, 81, 1);
+  color: var(--text-color-);
   text-align: center;
   opacity: 0;
 }
@@ -713,10 +880,10 @@ p.animate {
   font-size: 20px;
   font-weight: 500;
   text-align: center;
-  color: rgba(107, 114, 128, 1);
+  color: var(--text-color-small);
   opacity: 0;
 }
-/* الحاوية الخارجية */
+
 .tabs-wrapper {
   display: flex;
   justify-content: center;
@@ -725,17 +892,16 @@ p.animate {
   margin-top: 40px;
 }
 
-/* الكبسولة */
 .tabs {
+  height: 80px;
   position: relative;
-  background: #f1f3f6;
+  background: var(--tabs--color);
   padding: 8px;
   border-radius: 999px;
   display: flex;
   gap: 6px;
 }
 
-/* التاب */
 .tab {
   border: none;
   background: transparent;
@@ -743,36 +909,29 @@ p.animate {
   border-radius: 999px;
   font-size: 14px;
   cursor: pointer;
-  color: #9aa1ad;
+  color: var(--text-btn-tab);
   display: flex;
   align-items: center;
   gap: 6px;
   transition: all 0.5s ease;
 }
 .tab:hover {
-  background-color: #ffffff98;
-  color: #23262b;
+  background-color: var(--tab-hover);
+  color: rgba(70, 79, 92, 0.719);
 }
-.tab:focus {
-  outline: none;
-  background: #fff;
-  color: #2b2f36;
-}
-/* التاب المفعّل */
+
 .tab.active {
   position: relative;
-  background: #fff;
-  color: #2b2f36;
+  background-color: var(--bg-tab-btn-hover);
+  color: var(--text-btn-tab-hover);
   font-weight: 600;
   z-index: 1;
 }
 
-/* الخلفية المنقّطة */
 .tab.active::after {
   content: "";
   position: absolute;
   inset: -18px;
-  background: radial-gradient(#fff 1px, transparent 1px);
   background-size: 6px 6px;
   opacity: 0.35;
   z-index: -1;
@@ -816,7 +975,7 @@ p.animate {
 .tab-three-icon {
   width: 56px;
   height: 56px;
-  border: 0.8px solid rgba(209, 213, 219, 1);
+  border: var(--border-tab);
   border-radius: 39.98px;
   display: flex;
   justify-content: center;
@@ -847,7 +1006,7 @@ p.animate {
 .tab-three-left-text {
   font-size: 32px;
   font-weight: 700;
-  color: rgba(55, 65, 81, 1);
+  color: var(--text-color-);
   text-align: start;
   margin-top: 12px;
   padding-right: 20px;
@@ -859,7 +1018,7 @@ p.animate {
   font-size: 14px;
   font-weight: 400;
   margin-top: 30px;
-  color: #6b7280;
+  color: var(--text-color-small);
   opacity: 0;
   padding-right: 20px;
 }
@@ -869,7 +1028,7 @@ p.animate {
   outline: none;
   border: none;
   background-color: #643e96;
-  color: #fff;
+  color: var(--color-white);
   width: 163px;
   height: 55px;
   font-size: 18px;
@@ -884,7 +1043,7 @@ p.animate {
 }
 .tab-one-left-btn:hover,
 .tab-two-left-btn:hover,
-.tab-three-left-btn:hover{
+.tab-three-left-btn:hover {
   background: rgb(85, 48, 133);
 }
 .tab-one-right,
@@ -943,7 +1102,7 @@ p.animate {
 .chart-box {
   width: 280px;
   height: 180px;
-  background: #fff;
+  background: var(--color-white);
   padding: 10px;
   border-radius: 18px;
   box-sizing: border-box;
@@ -959,6 +1118,8 @@ p.animate {
   justify-content: space-between;
   align-items: flex-end;
   height: 100%;
+  flex-direction: row-reverse;
+  color: rgba(50, 24, 83, 1);
 }
 
 .bar-item {
@@ -1004,7 +1165,7 @@ p.animate {
   display: flex;
   width: 280px;
   height: 55px;
-  background-color: white;
+  background-color: var(--color-white);
   border-radius: 13px;
   position: absolute;
   bottom: 0;
@@ -1015,11 +1176,13 @@ p.animate {
   opacity: 0;
 }
 .tab-center-down-text {
+  color: var(--color-box-small);
   width: 40%;
   font-size: 14px;
   font-weight: 500;
 }
 .tab-center-down-num {
+  color: var(--color-box-small);
   width: 40%;
   display: flex;
   gap: 4px;
@@ -1044,7 +1207,7 @@ p.animate {
   position: relative;
   width: 200px;
   height: 350px;
-  background-color: #fff;
+  background-color: var(--color-white);
   border: 14px solid rgba(100, 62, 150, 1);
   border-radius: 28px;
   display: flex;
@@ -1084,10 +1247,70 @@ p.animate {
 }
 .tab-two-right-kadi-salon {
   position: absolute;
-  bottom: 5px;
-  border-radius: 8px;
+  bottom: 21px;
+  width: 245px;
+  height: 225px;
+  direction: ltr;
+  background: var(--color-white, #fff);
+  border-radius: 12px;
+  padding: 14px;
+  font-family: sans-serif;
+  /* box-shadow: 0 8px 25px rgba(0,0,0,0.08); */
   opacity: 0;
 }
+
+.icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #643e96;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.invoice-card h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--text-color-);
+}
+
+.date {
+  font-size: 11px;
+  color: var(--text-color-small);
+  margin-bottom: 12px;
+}
+
+.date span {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.coupon strong {
+  color: #ef4444;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 10px 0;
+}
+
+.total {
+  font-weight: 600;
+}
+
 .tab-center-up.animate {
   animation: animationcenterup 0.4s 0.3s ease forwards;
 }
@@ -1142,13 +1365,13 @@ p.animate {
 .accordion-text-title {
   font-size: 38px;
   font-weight: 800;
-  color: rgba(55, 65, 81, 1);
+  color: var(--text-color-);
   opacity: 0;
 }
 .accordion-text-pragraph {
   font-size: 20px;
   font-weight: 500;
-  color: rgba(107, 114, 128, 1);
+  color: var(--text-color-small);
   margin-top: 15px;
   opacity: 0;
 }
@@ -1196,16 +1419,17 @@ p.animate {
 }
 .panel-title {
   padding: 33px 32px;
-  color: #2b2f36;
+
   position: relative;
   font-size: 20px;
   font-weight: 600;
   line-height: 150%;
-  color: rgba(107, 114, 128, 1);
+  color: var(--text-color-small);
   cursor: pointer;
 }
 .panel-title::before {
   content: "";
+  background-color: transparent;
   background-image: url(../src/imgs/add.png);
   background-position: center;
   background-size: contain;
@@ -1222,6 +1446,7 @@ p.animate {
   cursor: pointer;
 }
 .panel-content {
+  color: var(--text-color-small);
   max-height: 0;
   overflow: hidden;
   transition: all 0.5s ease;
@@ -1235,6 +1460,7 @@ p.animate {
 }
 .panel.active .panel-title::before {
   content: "";
+  background-color: transparent;
   background-image: url(../src/imgs/remove.png);
   background-position: center;
   background-size: contain;
@@ -1285,7 +1511,7 @@ p.animate {
 .footer-title {
   font-size: 20px;
   font-weight: 700;
-  color: rgba(55, 65, 81, 1);
+  color: var(--text-color-);
   opacity: 0;
 }
 
@@ -1351,7 +1577,7 @@ p.animate {
 .footer-title-social {
   font-size: 20px;
   font-weight: 700;
-  color: rgba(55, 65, 81, 1);
+  color: var(--text-color-);
   opacity: 0;
 }
 .footer-title-social.animate {
@@ -1360,7 +1586,7 @@ p.animate {
 .footer-copy {
   font-size: 12px;
   font-weight: 500;
-  color: rgba(107, 114, 128, 1);
+  color: var(--text-color-small);
   opacity: 0;
 }
 .footer-copy.animate {
@@ -1594,7 +1820,7 @@ p.animate {
   .service-item {
     width: 58px;
     height: 58px;
-    background-color: #fff;
+
     border-radius: 50%;
     display: grid;
     justify-items: center;
@@ -1652,7 +1878,6 @@ p.animate {
     text-align: center;
   }
   .kadi-home-two__title {
-    color: rgba(60, 63, 79, 1);
     font-size: 28px;
     font-weight: 800;
     line-height: 140%;
@@ -1661,7 +1886,6 @@ p.animate {
     word-spacing: 5px;
   }
   .kadi-home-two__desc {
-    color: rgba(107, 114, 128, 1);
     text-align: center;
     line-height: 140%;
     font-size: 16px;
@@ -1681,13 +1905,7 @@ p.animate {
     height: 50px;
     border-radius: 499.76px;
     padding: 10px;
-    color: #fff;
-    background: radial-gradient(
-      circle at 50% 50%,
-      rgb(56, 22, 102),
-      70%,
-      #c891c3 80%
-    );
+
     font-size: 31.98px;
     font-weight: 800;
     position: absolute;
@@ -1701,14 +1919,9 @@ p.animate {
   }
 
   .kadi-boxes-all:nth-child(1) {
-    background: linear-gradient(
-      to top,
-      rgba(198, 145, 193, 0.1),
-      rgba(100, 62, 152, 0.1)
-    );
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(198, 145, 193, 0.6);
+
     position: relative;
     width: 276.3079528808594px;
     height: auto;
@@ -1717,14 +1930,9 @@ p.animate {
     opacity: 0;
   }
   .kadi-boxes-all:nth-child(2) {
-    background: linear-gradient(
-      to top,
-      rgba(198, 145, 193, 0.1),
-      rgba(100, 62, 152, 0.1)
-    );
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(198, 145, 193, 0.6);
+
     width: 276px;
     height: auto;
     margin-top: 80px;
@@ -1740,18 +1948,8 @@ p.animate {
     width: 94px;
     height: 70px;
   }
-  .kadi-boxes-all:nth-child(2) .kadi-text-titles {
-    color: rgba(100, 62, 150, 1);
-  }
-  .kadi-boxes-all:nth-child(2) .kadi-text-pragraph {
-    color: rgba(107, 114, 128, 1);
-  }
+
   .kadi-boxes-all:nth-child(3) {
-    background: linear-gradient(
-      to top,
-      rgba(198, 145, 193, 0.1),
-      rgba(100, 62, 152, 0.1)
-    );
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(198, 145, 193, 0.6);
@@ -1772,7 +1970,6 @@ p.animate {
     padding-bottom: 34px;
   }
   .kadi-text-titles {
-    color: rgba(200, 145, 195, 1);
     font-size: 21px;
     line-height: 140%;
     font-weight: 700;
@@ -1782,11 +1979,10 @@ p.animate {
     font-size: 12px;
     font-weight: 500;
     text-align: center;
-    color: rgba(107, 114, 128, 1);
+
     /* padding-bottom: 34px; */
   }
   .kadi-Administration {
-    background-color: rgba(246, 248, 252, 1);
     border-radius: 40px;
     width: 100%;
     height: auto;
@@ -1804,14 +2000,13 @@ p.animate {
   .kadi-Administration-title__text {
     font-size: 28px;
     font-weight: 800;
-    color: rgba(55, 65, 81, 1);
+
     text-align: center;
   }
   .kadi-Administration-title__desc {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
-    color: rgba(107, 114, 128, 1);
   }
   .tabs-wrapper {
     display: flex;
@@ -1823,7 +2018,7 @@ p.animate {
   .tabs {
     height: 45px;
     position: relative;
-    background: #f1f3f6;
+
     padding: 8px;
     border-radius: 999px;
     display: flex;
@@ -1831,12 +2026,12 @@ p.animate {
   }
   .tab {
     border: none;
-    background: transparent;
+
     padding: 10px 7px;
     border-radius: 999px;
     font-size: 9px;
     cursor: pointer;
-    color: #9aa1ad;
+
     display: flex;
     align-items: center;
     gap: 6px;
@@ -1867,7 +2062,7 @@ p.animate {
   .tab-three-icon {
     width: 39px;
     height: 39px;
-     border: 0.8px solid rgba(209, 213, 219, 1);
+
     border-radius: 39.98px;
     display: flex;
     justify-content: center;
@@ -1901,17 +2096,17 @@ p.animate {
   .tab-center-up {
     position: absolute;
     bottom: 99px;
-    right: 400px;
+    right: 250px;
   }
   .chart-box {
     position: absolute;
     top: 0;
-    right: 340px;
+    right: 190px;
   }
   .tab-center-down {
     position: absolute;
     bottom: 0;
-    right: 340px;
+    right: 190px;
   }
   .icon-tab-img {
     width: 20px;
@@ -1945,14 +2140,14 @@ p.animate {
   .accordion-text-title {
     font-size: 28px;
     font-weight: 800;
-    color: rgba(55, 65, 81, 1);
+
     opacity: 0;
     line-height: 60px;
   }
   .accordion-text-pragraph {
     font-size: 14px;
     font-weight: 500;
-    color: rgba(107, 114, 128, 1);
+
     margin-top: 15px;
     line-height: 140%;
     opacity: 0;
@@ -1968,23 +2163,23 @@ p.animate {
   .panel {
     margin: 16px 0px;
     width: 85%;
-    border: 1px solid rgba(220, 217, 217, 0.5);
+
     border-radius: 24px;
     opacity: 0;
     transition: all 0.4s ease-in;
   }
   .panel-title {
     padding: 33px 32px;
-    color: #2b2f36;
+
     position: relative;
     font-size: 14px;
     font-weight: 600;
     line-height: 150%;
-    color: rgba(107, 114, 128, 1);
   }
   .panel-title::before {
     content: "";
-    background-image: url(../uploads/add.png);
+    background-color: transparent;
+    background-image: url(../src/imgs/add.png);
     background-position: center;
     background-size: contain;
     width: 18.5px;
@@ -2018,13 +2213,15 @@ p.animate {
   }
   .panel.active .panel-title::before {
     content: "";
-    background-image: url(../uploads/remove.png);
+    background-color: transparent;
+    background-image: url(../src/imgs/remove.png);
     background-position: center;
     background-size: contain;
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   .footer-sec {
     /* background-color: rgba(224, 224, 224, 0.904); */
     width: 100%;
@@ -2073,7 +2270,7 @@ p.animate {
     content: "© حقوق النشر 2020-2024. جميع الحقوق محفوظة.Kadi Beauty, تطبيق كادي بيوتي.";
     font-size: 12px;
     font-weight: 500;
-    color: rgba(107, 114, 128, 1);
+
     text-align: center;
     padding: 0px 60px;
   }
@@ -2083,7 +2280,6 @@ p.animate {
   .footer-title {
     font-size: 20px;
     font-weight: 700;
-    color: rgba(55, 65, 81, 1);
   }
   .social-icons {
     margin-top: 20px;
@@ -2095,7 +2291,7 @@ p.animate {
     height: 40px;
     max-width: 209px;
     border-radius: 66px;
-    background-color: rgba(200, 145, 195, 1);
+
     padding: 12px;
     margin: 0px 5px;
   }
@@ -2340,7 +2536,7 @@ p.animate {
   .service-item {
     width: 58px;
     height: 58px;
-    background-color: #fff;
+
     border-radius: 50%;
     display: grid;
     justify-items: center;
@@ -2407,7 +2603,6 @@ p.animate {
     word-spacing: 5px;
   }
   .kadi-home-two__desc {
-    color: rgba(107, 114, 128, 1);
     text-align: center;
     line-height: 140%;
     font-size: 16px;
@@ -2427,13 +2622,7 @@ p.animate {
     height: 50px;
     border-radius: 499.76px;
     padding: 10px;
-    color: #fff;
-    background: radial-gradient(
-      circle at 50% 50%,
-      rgb(56, 22, 102),
-      70%,
-      #c891c3 80%
-    );
+
     font-size: 31.98px;
     font-weight: 800;
     position: absolute;
@@ -2447,14 +2636,9 @@ p.animate {
   }
 
   .kadi-boxes-all:nth-child(1) {
-    background: linear-gradient(
-      to top,
-      rgba(198, 145, 193, 0.1),
-      rgba(100, 62, 152, 0.1)
-    );
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(198, 145, 193, 0.6);
+
     position: relative;
     width: 276.3079528808594px;
     height: auto;
@@ -2463,14 +2647,9 @@ p.animate {
     opacity: 0;
   }
   .kadi-boxes-all:nth-child(2) {
-    background: linear-gradient(
-      to top,
-      rgba(198, 145, 193, 0.1),
-      rgba(100, 62, 152, 0.1)
-    );
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(198, 145, 193, 0.6);
+
     width: 276px;
     height: auto;
     margin-top: 80px;
@@ -2486,21 +2665,11 @@ p.animate {
     width: 94px;
     height: 70px;
   }
-  .kadi-boxes-all:nth-child(2) .kadi-text-titles {
-    color: rgba(100, 62, 150, 1);
-  }
-  .kadi-boxes-all:nth-child(2) .kadi-text-pragraph {
-    color: rgba(107, 114, 128, 1);
-  }
+
   .kadi-boxes-all:nth-child(3) {
-    background: linear-gradient(
-      to top,
-      rgba(198, 145, 193, 0.1),
-      rgba(100, 62, 152, 0.1)
-    );
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(198, 145, 193, 0.6);
+
     width: 276.3079528808594px;
     height: 206px;
     height: auto;
@@ -2518,7 +2687,6 @@ p.animate {
     padding-bottom: 34px;
   }
   .kadi-text-titles {
-    color: rgba(200, 145, 195, 1);
     font-size: 21px;
     line-height: 140%;
     font-weight: 700;
@@ -2528,11 +2696,8 @@ p.animate {
     font-size: 12px;
     font-weight: 500;
     text-align: center;
-    color: rgba(107, 114, 128, 1);
-    /* padding-bottom: 34px; */
   }
   .kadi-Administration {
-    background-color: rgba(246, 248, 252, 1);
     border-radius: 40px;
     width: 100%;
     height: auto;
@@ -2550,14 +2715,13 @@ p.animate {
   .kadi-Administration-title__text {
     font-size: 28px;
     font-weight: 800;
-    color: rgba(55, 65, 81, 1);
+
     text-align: center;
   }
   .kadi-Administration-title__desc {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
-    color: rgba(107, 114, 128, 1);
   }
   .tabs-wrapper {
     display: flex;
@@ -2569,7 +2733,7 @@ p.animate {
   .tabs {
     height: 45px;
     position: relative;
-    background: #f1f3f6;
+
     padding: 8px;
     border-radius: 999px;
     display: flex;
@@ -2582,7 +2746,7 @@ p.animate {
     border-radius: 999px;
     font-size: 9px;
     cursor: pointer;
-    color: #9aa1ad;
+
     display: flex;
     align-items: center;
     gap: 6px;
@@ -2613,7 +2777,7 @@ p.animate {
   .tab-three-icon {
     width: 39px;
     height: 39px;
-    border: 0.8px solid rgba(209, 213, 219, 1);
+
     border-radius: 39.98px;
     display: flex;
     justify-content: center;
@@ -2691,14 +2855,13 @@ p.animate {
   .accordion-text-title {
     font-size: 28px;
     font-weight: 800;
-    color: rgba(55, 65, 81, 1);
     opacity: 0;
     line-height: 60px;
   }
   .accordion-text-pragraph {
     font-size: 14px;
     font-weight: 500;
-    color: rgba(107, 114, 128, 1);
+
     margin-top: 15px;
     line-height: 140%;
     opacity: 0;
@@ -2714,19 +2877,18 @@ p.animate {
   .panel {
     margin: 16px 0px;
     width: 85%;
-    border: 1px solid rgba(220, 217, 217, 0.5);
+
     border-radius: 24px;
     opacity: 0;
     transition: all 0.4s ease-in;
   }
   .panel-title {
     padding: 22px 32px;
-    color: #2b2f36;
+
     position: relative;
     font-size: 14px;
     font-weight: 600;
     line-height: 150%;
-    color: rgba(107, 114, 128, 1);
   }
   .panel-title::before {
     content: "";
@@ -2819,7 +2981,7 @@ p.animate {
     content: "© حقوق النشر 2020-2024. جميع الحقوق محفوظة.Kadi Beauty, تطبيق كادي بيوتي.";
     font-size: 12px;
     font-weight: 500;
-    color: rgba(107, 114, 128, 1);
+
     text-align: center;
     padding: 0px 60px;
   }
@@ -2829,7 +2991,6 @@ p.animate {
   .footer-title {
     font-size: 20px;
     font-weight: 700;
-    color: rgba(55, 65, 81, 1);
   }
   .social-icons {
     margin-top: 20px;
@@ -2841,7 +3002,7 @@ p.animate {
     height: 40px;
     max-width: 209px;
     border-radius: 66px;
-    background-color: rgba(200, 145, 195, 1);
+
     padding: 12px;
     margin: 0px 5px;
   }
@@ -2857,6 +3018,57 @@ p.animate {
     font-weight: 700;
     color: rgba(107, 114, 128, 1);
   }
+  .scroll-up {
+  width: 35px;
+  height: 35px;
+  display: none;
+  border: 3px solid rgb(78 39 109);
+  background-color: var(--bg-scroll);
+  border-radius: 50%;
+  color: var(--color-white);
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  transition: all 0.3s ease;
+  z-index: 100000;
+  text-decoration: none;
+}
+.scroll-up:hover {
+  border: 1px solid rgb(37, 10, 59);
+  background-color: var(--bg-scroll-hover);
+  border-radius: 50%;
+  color: var(--color-white);
+  cursor: pointer;
+}
+.arrowup {
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  font-size: 23px;
+  padding: 0px;
+}
+.arrow-icon {
+  width: 30px;
+  height: 35px;
+  color: black;
+}
+  #theme-switch {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(57, 23, 85);
+  background-color: var(--bg-scroll);
+  border-radius: 50%;
+  color: var(--color-white);
+  position: fixed;
+  bottom: 20px;
+  right: 100px;
+  transition: all 0.3s ease;
+  z-index: 100000;
+  text-decoration: none;
+}
 }
 @media (max-width: 320px) {
   .responsive-navbar {
@@ -3086,7 +3298,7 @@ p.animate {
   .service-item {
     width: 48px;
     height: 48px;
-    background-color: #fff;
+
     border-radius: 50%;
     display: grid;
     justify-items: center;
@@ -3145,7 +3357,6 @@ p.animate {
     text-align: center;
   }
   .kadi-home-two__title {
-    color: rgba(60, 63, 79, 1);
     font-size: 28px;
     font-weight: 800;
     line-height: 140%;
@@ -3154,7 +3365,6 @@ p.animate {
     word-spacing: 5px;
   }
   .kadi-home-two__desc {
-    color: rgba(107, 114, 128, 1);
     text-align: center;
     line-height: 140%;
     font-size: 16px;
@@ -3174,13 +3384,6 @@ p.animate {
     height: 50px;
     border-radius: 499.76px;
     padding: 10px;
-    color: #fff;
-    background: radial-gradient(
-      circle at 50% 50%,
-      rgb(56, 22, 102),
-      70%,
-      #c891c3 80%
-    );
     font-size: 31.98px;
     font-weight: 800;
     position: absolute;
@@ -3194,14 +3397,9 @@ p.animate {
   }
 
   .kadi-boxes-all:nth-child(1) {
-    background: linear-gradient(
-      to top,
-      rgba(198, 145, 193, 0.1),
-      rgba(100, 62, 152, 0.1)
-    );
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(198, 145, 193, 0.6);
+
     position: relative;
     width: 276.3079528808594px;
     height: auto;
@@ -3210,14 +3408,9 @@ p.animate {
     opacity: 0;
   }
   .kadi-boxes-all:nth-child(2) {
-    background: linear-gradient(
-      to top,
-      rgba(198, 145, 193, 0.1),
-      rgba(100, 62, 152, 0.1)
-    );
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(198, 145, 193, 0.6);
+
     width: 276px;
     height: auto;
     margin-top: 80px;
@@ -3234,20 +3427,13 @@ p.animate {
     height: 70px;
   }
   .kadi-boxes-all:nth-child(2) .kadi-text-titles {
-    color: rgba(100, 62, 150, 1);
   }
   .kadi-boxes-all:nth-child(2) .kadi-text-pragraph {
-    color: rgba(107, 114, 128, 1);
   }
   .kadi-boxes-all:nth-child(3) {
-    background: linear-gradient(
-      to top,
-      rgba(198, 145, 193, 0.1),
-      rgba(100, 62, 152, 0.1)
-    );
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(198, 145, 193, 0.6);
+
     width: 276.3079528808594px;
     height: 206px;
     height: auto;
@@ -3265,7 +3451,6 @@ p.animate {
     padding-bottom: 34px;
   }
   .kadi-text-titles {
-    color: rgba(200, 145, 195, 1);
     font-size: 21px;
     line-height: 140%;
     font-weight: 700;
@@ -3275,11 +3460,8 @@ p.animate {
     font-size: 12px;
     font-weight: 500;
     text-align: center;
-    color: rgba(107, 114, 128, 1);
-    /* padding-bottom: 34px; */
   }
   .kadi-Administration {
-    background-color: rgba(246, 248, 252, 1);
     border-radius: 40px;
     width: 100%;
     height: auto;
@@ -3297,14 +3479,13 @@ p.animate {
   .kadi-Administration-title__text {
     font-size: 28px;
     font-weight: 800;
-    color: rgba(55, 65, 81, 1);
+
     text-align: center;
   }
   .kadi-Administration-title__desc {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
-    color: rgba(107, 114, 128, 1);
   }
   .tabs-wrapper {
     display: flex;
@@ -3316,7 +3497,7 @@ p.animate {
   .tabs {
     height: 52px;
     position: relative;
-    background: #f1f3f6;
+
     padding: 8px;
     border-radius: 999px;
     display: flex;
@@ -3330,7 +3511,7 @@ p.animate {
     border-radius: 999px;
     font-size: 7px;
     cursor: pointer;
-    color: #9aa1ad;
+
     display: flex;
     align-items: center;
     gap: 3px;
@@ -3361,7 +3542,7 @@ p.animate {
   .tab-three-icon {
     width: 39px;
     height: 39px;
-    border: 0.8px solid rgba(209, 213, 219, 1);
+
     border-radius: 39.98px;
     display: flex;
     justify-content: center;
@@ -3439,14 +3620,14 @@ p.animate {
   .accordion-text-title {
     font-size: 28px;
     font-weight: 800;
-    color: rgba(55, 65, 81, 1);
+
     opacity: 0;
     line-height: 60px;
   }
   .accordion-text-pragraph {
     font-size: 14px;
     font-weight: 500;
-    color: rgba(107, 114, 128, 1);
+
     margin-top: 15px;
     line-height: 140%;
     opacity: 0;
@@ -3462,7 +3643,7 @@ p.animate {
   .panel {
     margin: 10px 0px;
     width: 85%;
-    border: 1px solid rgba(220, 217, 217, 0.5);
+
     border-radius: 24px;
     opacity: 0;
     transition: all 0.4s ease-in;
@@ -3474,7 +3655,6 @@ p.animate {
     font-size: 10px;
     font-weight: 600;
     line-height: 150%;
-    color: rgba(107, 114, 128, 1);
   }
   .panel-title::before {
     content: "";
@@ -3537,7 +3717,7 @@ p.animate {
     padding-top: 75px;
     padding-inline: 0;
   }
-  .footer-img-logo{
+  .footer-img-logo {
     width: 130px;
     height: 80px;
   }
@@ -3572,7 +3752,7 @@ p.animate {
     content: "© حقوق النشر 2020-2024. جميع الحقوق محفوظة.Kadi Beauty, تطبيق كادي بيوتي.";
     font-size: 12px;
     font-weight: 500;
-    color: rgba(107, 114, 128, 1);
+
     text-align: center;
     padding: 0px 60px;
   }
@@ -3582,7 +3762,6 @@ p.animate {
   .footer-title {
     font-size: 20px;
     font-weight: 700;
-    color: rgba(55, 65, 81, 1);
   }
   .footer-title-social {
     text-align: center;
@@ -3601,7 +3780,7 @@ p.animate {
     height: 40px;
     max-width: 209px;
     border-radius: 66px;
-    background-color: rgba(200, 145, 195, 1);
+
     padding: 12px;
     margin: 0px 5px;
   }
@@ -3615,46 +3794,12 @@ p.animate {
   .contact-address {
     font-size: 11px;
     font-weight: 700;
-    color: rgba(107, 114, 128, 1);
   }
 }
 html {
   scroll-behavior: smooth;
 }
-.scroll-up {
-  width: 45px;
-  height: 45px;
-  display: none;
-  border: 3px solid rgb(78 39 109);
-  background-color: rgb(39 20 65);
-  border-radius: 50%;
-  color: rgb(255, 255, 255);
-  position: fixed;
-  bottom: 20px;
-  right: 50px;
-  transition: all 0.3s ease;
-  z-index: 100000;
-  text-decoration: none;
-}
-.scroll-up:hover {
-  border: 3px solid rgb(37, 10, 59);
-  background-color: rgb(57, 35, 88);
-  border-radius: 50%;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-}
-.arrowup {
-  display: grid;
-  justify-items: center;
-  justify-content: center;
-  font-size: 24px;
-  padding: 4px;
-}
-.arrow-icon {
-  width: 30px;
-  height: 35px;
-  color: black;
-}
+
 .tab-one-left-btn,
 .tab-two-left-btn,
 .tab-three-left-btn,
@@ -3664,7 +3809,7 @@ html {
 .btn-install-app.animate {
   animation: animation 0.5s 0.8s ease-in forwards;
 }
-.btn-install-app:hover{
+.btn-install-app:hover {
   background: rgb(85, 48, 133);
 }
 
