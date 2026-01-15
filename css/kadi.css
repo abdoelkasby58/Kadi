@@ -26,7 +26,7 @@ body {
   --text-btn-tab: rgba(156, 163, 175, 1);
   --text-btn-tab-hover: rgba(75, 85, 99, 1);
   --bg-tab-btn-hover: rgba(255, 255, 255, 1);
-  --bg-scroll: rgb(57, 35, 88);
+  --bg-scroll: rgba(57, 35, 88, 0.678);
   --bg-scroll-hover: rgb(57, 35, 88);
   --tab-hover: #ffffff98;
   --color-box-small: black;
@@ -53,7 +53,7 @@ body {
 
   --color-white: rgba(15, 23, 42, 1);
   --tabs--color: rgba(37, 48, 66, 0.76);
-  --bg-scroll: rgb(89, 66, 121);
+  --bg-scroll: rgba(89, 66, 121, 0.678);
   --bg-scroll-hover: rgba(72, 44, 110, 0.658);
   --text-btn-tab: rgba(148, 163, 184, 1);
   --text-btn-tab-hover: rgba(226, 232, 240, 1);
@@ -3028,7 +3028,7 @@ hr {
   color: var(--color-white);
   position: fixed;
   bottom: 20px;
-  right: 50px;
+  right: 5px;
   transition: all 0.3s ease;
   z-index: 100000;
   text-decoration: none;
@@ -3064,7 +3064,7 @@ hr {
   color: var(--color-white);
   position: fixed;
   bottom: 20px;
-  right: 100px;
+  right: 45px;
   transition: all 0.3s ease;
   z-index: 100000;
   text-decoration: none;
