@@ -170,7 +170,7 @@ formEl.addEventListener("submit", function (event) {
 
   if (!savedEmail || !savedPassword) {
     emailerror.style.display = "block";
-    window.location.href = "forgetemail.html";
+
     loginkadi = true;
   } else {
     emailerror.style.display = "none";
