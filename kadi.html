@@ -15,7 +15,7 @@
   
 <body> 
 
-  <div class="container">
+  <div class="container" id="container-kadi">
      <!-- ScrollUp -->
     <a id="up" class="scroll-up" href="#">
     <span class="arrowup">↑</span>
@@ -26,511 +26,604 @@
 </button>
 
 <!-- NavResponsive -->
-    <div class="responsive-navbar" id="responsive-nav-bar-page">
-      <nav class="nav-bar-responsive">
-        <img src="src/imgs/Group-logo-header.png" class="nav-bar-responsive-logo" alt="logo-kadi" />
-        <button id="close" class="nav-bar-responsive-btn">
-          <img class="nav-bar-responsive-clear" src="src/imgs/cleassr.pnng.png" alt="clear" />
-        </button>
-      </nav>
-      <div class="links-navbars">
-        <nav class="links-navbar">
-          <a class="linknavbaerresponsive" href="#footerres">حول</a>
-          <a class="linknavbaerresponsive" href="#tabssres">الميزات</a>
-          <a class="linknavbaerresponsive" href="#kadi-home-twores">مزودي الخدمات</a>
-          <a class="linknavbaerresponsive" href="#accorres">الأسئلة الشائعة</a>
-        </nav>
+ <div class="responsive-navbar" id="responsive-nav-bar-page">
+  <nav class="nav-bar-responsive">
+    <img src="src/imgs/Group-logo-header.png" class="nav-bar-responsive-logo" alt="logo-kadi" />
+    <button id="close" class="nav-bar-responsive-btn">
+      <img class="nav-bar-responsive-clear" src="src/imgs/cleassr.pnng.png" alt="clear" />
+    </button>
+  </nav>
+
+  <div class="links-navbars">
+    <nav class="links-navbar">
+      <a class="linknavbaerresponsive" id="linkAbout" href="#footerres">حول</a>
+      <a class="linknavbaerresponsive" id="linkFeatures" href="#tabssres">الميزات</a>
+      <a class="linknavbaerresponsive" id="linkProviders" href="#kadi-home-twores">مزودي الخدمات</a>
+      <a class="linknavbaerresponsive" id="linkFAQ" href="#accorres">الأسئلة الشائعة</a>
+    </nav>
+  </div>
+
+  <div class="box-social" id="box-social">
+    <div class="box-social-too">
+      <div id="responsiveSocialText" class="box-social-text-res">تابعونا علي وسائل التواصل الأجتماعي</div>
+      <div class="box-social-icons">
+        <a href="https://x.com/"> <img class="social-icon-footer" src="src/imgs/x.png" alt="x" /></a>
+        <a href="https://www.instagram.com/"> <img class="social-icon-footer"
+            src="src/imgs/62f88b2f2697066503c85b23_instagram.svg.png" alt="instagram" /></a>
+        <a href="https://dribbble.com/"> <img class="social-icon-footer"
+            src="src/imgs/62f88b2f071b67671ed1adeb_dribbble.svg.png" alt="dribble" /></a>
+        <a href="https://www.google.com/"><img class="social-icon-footer"
+            src="src/imgs/62f88b2e61544309251a95da_email.svg.png" alt="email" /></a>
       </div>
-      <div class="box-social" id="box-social">
-        <div class="box-social-too">
-          <div class="box-social-text-res">تابعونا علي وسائل التواصل الأجتماعي</div>
-          <div class="box-social-icons">
-            <a href="https://x.com/"> <img class="social-icon-footer" src="src/imgs/x.png" alt="x" /></a>
-            <a href="https://www.instagram.com/"> <img class="social-icon-footer"
-                src="src/imgs/62f88b2f2697066503c85b23_instagram.svg.png" alt="instagram" /></a>
-            <a href="https://dribbble.com/"> <img class="social-icon-footer"
-                src="src/imgs/62f88b2f071b67671ed1adeb_dribbble.svg.png" alt="dribble" /></a>
-            <a href="https://www.google.com/"><img class="social-icon-footer"
-                src="src/imgs/62f88b2e61544309251a95da_email.svg.png" alt="email" /></a>
+    </div>
+  </div>
+</div>
+
+    <!-- NavBar -->
+<header class="nav-bar-kadi">
+  <div class="header">
+    <!-- header-right -->
+    <div  class="header-right-kadi">
+      <button id="btndownloadapp"  class="download-btn">
+        <span id="btntextdownload"  class="btn-text-header">تحميل التطبيق</span>
+        <div class="icons-apple">
+          <img src="src/imgs/Apple Logo.png" alt="apple.logo" class="apple-logo" />
+        </div>
+        <span class="icons-google">
+          <img src="src/imgs/logo-gogle-play.png" class="google-play-logo" alt="google" />
+        </span>
+      </button>
+    </div>
+
+    <button id="btnmenu" class="menu-label" onclick="toggleMenu()">
+      <span id="menutext" class="menu-text">القائمة</span>
+      <span class="icon-menu">
+        <img src="src/imgs/Encapsulated Group (1).png" alt="menu" />
+      </span>
+    </button>
+
+    <!-- header-center -->
+    <div class="header-center">
+      <nav class="nav-links">
+        <a id="linkabout" href="#footer">حول</a>
+        <a id="linkfeatures" href="#tabss">الميزات</a>
+        <a id="linkservices" href="#kadi-home-two">مزودي الخدمات</a>
+        <a id="linkfaq" href="#accor">الأسئلة الشائعة</a>
+      </nav>
+    </div>
+
+    <!-- header-left -->
+    <div class="header-left">
+      <a href="#">
+        <img src="src/imgs/Group-logo-header.png" alt="logo-kadi" />
+      </a>
+    </div>
+  </div>
+
+ 
+<!-- kadi-home-Header -->
+<section class="kadi-home">
+  <div class="kadi-home-content">
+    <div class="language-select-kadi">
+   
+ <label for="cars" class="language-icon"
+          ><iconify-icon
+            icon="material-symbols:language"
+            class="iconify-icon"
+           
+          ></iconify-icon>
+         
+        </label>
+  <select class="lan" id="selectkadilang">
+      <option id="optionar" value="ar" selected>AR</option>
+      <option id="optionen" value="en" >EN</option>
+    </select>
+  </div>
+    <h1 id="hometitle">اختر، احجز، وجدد إطلالتك مع كادي بيوتي</h1>
+    <p id="homeparagraph">
+      تصفح خدمات كادي بيوتي للوصول إلى أفضل صالونات وخبراء التجميل. احجز بكل سهولة واستعد لإطلالة جديدة تجمع بين الأناقة والفخامة.
+    </p>
+    <button id="btn-install-app" class="btn-install-app">
+      <div class="header-logo">
+        <div class="header-logo-icons">
+          <img src="src/imgs/logo-gogle-play.png" alt="google.logo" class="google-play-logo-aaa" />
+        </div>
+        <div class="header-logo-icons-apple">
+          <img src="src/imgs/Apple Logo.png" alt="apple.logo" class="apple-logo-aaaa" />
+        </div>
+      </div>
+      <div id="btntextinstall" class="btn-text-install">تحميل التطبيق</div>
+    </button>
+</section>
+</header>
+
+ 
+</section>
+
+<!-- Kadi-image$title -->
+    <section class="kadi-home-one">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-information">
+        <div class="hero-text">
+          <h1 id="heroTitle" class="hero-title">
+            ليش تنتظر بالدور، احجز موعدك الآن!
+          </h1>
+          <p id="heroDescription" class="hero-description">
+            تطبيق كادي بيوتي هو دليلك الأول الذي يجمع أفضل الصالونات ومراكز السبا،
+            بالإضافة إلى مجموعة واسعة من الخدمات المنزلية التي تأتيكِ حتى باب بيتك!
+            الآن، تصفح واحجز موعدكِ بسهولة في ثلاث خطوات فقط!
+          </p>
+        </div>
+
+        <div class="hero-boxes">
+          <div class="hero-services">
+            <div class="service-item s-more">
+              <img src="src/imgs/fi_5498588.png" alt="aa" class="service-item-logo" height="20px">
+              <span id="serviceHair" class="service-item-text">شعر</span>
+            </div>
+
+            <div class="service-item s-massage">
+              <img src="src/imgs/Nail.png" alt="yy" class="service-item-logo">
+              <span id="serviceMakeup" class="service-item-text">مكياج</span>
+            </div>
+
+            <div class="service-item s-makeup">
+              <img src="src/imgs/fi_1414267.png" alt="yy" class="service-item-logo">
+              <span id="serviceMassage" class="service-item-text">مساج</span>
+            </div>
+
+            <div class="service-item s-care">
+              <img src="src/imgs/flat.png" alt="tt" class="service-item-logo">
+              <span id="serviceHandCare" class="service-item-text">عناية باليدين</span>
+            </div>
+
+            <div class="service-item s-nails">
+              <img src="src/imgs/XMLID_1_.png" alt="tt" class="service-item-logo">
+              <span id="serviceSpa" class="service-item-text">سبا</span>
+            </div>
+
+            <div class="service-item s-hair">
+              <img src="src/imgs/Group.png" alt="tt" class="service-item-logo">
+              <span id="serviceMore" class="service-item-text">وأكثر</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- NavBar -->
-    <header class="nav-bar-kadi">
-      <div class="header ">
-        <!-- header-right -->
-        <div class="header-right-kadi">
-          <button href="#btn-downloads-app" class="download-btn" href="#btnkadidownload">
-            <span class="btn-text">تحميل التطبيق</span>
+  </section>
+</section>
 
-            <span class="icons">
-              <img src="src/imgs/logo-gogle-play.png" alt="google" />
-                </span>
-          </button>
-        </div>
-        <button for="menu-toggle" class="menu-label" onclick="toggleMenu()">
-          <span class="menu-text">القائمة</span>
-          <span class="icon-menu">
-            <img src="src/imgs/Encapsulated Group (1).png" alt="menu" />
-          </span>
-        </button>
-        <!-- header-center -->
-        <div class="header-center">
-          <nav class="nav-links">
-            <a href="#footer">حول</a>
-            <a href="#tabss">الميزات</a>
-            <a href="#kadi-home-two">مزودي الخدمات</a>
-            <a href="#accor">الأسئلة الشائعة</a>
-          </nav>
-        </div>
-        <!-- header-left -->
-        <div class="header-left"><a href="#">
-            <img src="src/imgs/Group-logo-header.png" alt="logo-kadi" /></a>
-        </div>
-    </header>
-    
-    <!-- kadi-home-Header -->
-    <section class="kadi-home">
-      <div class="kadi-home-content">
-        <h1>اختر، احجز، وجدد إطلالتك مع كادي بيوتي</h1>
-        <p>
-          تصفح خدمات كادي بيوتي للوصول إلى أفضل صالونات وخبراء التجميل. احجز
-          بكل سهولة
-          واستعد لإطلالة جديدة تجمع بين الأناقة والفخامة.
-        </p>
-        <button class="btn-install-app" href="#appkadi">
-          <div class="header-logo">
-            <div class="header-logo-icons">
-              <img src="src/imgs/logo-gogle-play.png" alt="google.logo" class="google-play-logo" />
-            </div>
-            <div class="header-logo-icons">
-              <img src="src/imgs/Apple Logo.png" alt="apple.logo" class="apple-logo" />
-            </div>
-          </div>
-          <div class="btn-text" href="#BtnHeader">تحميل التطبيق</div>
-
-        </button>
-       
-      </div>
-    </section>
-<!-- Kadi-image$title -->
-    <section class="kadi-home-one">
-      <section class="hero">
-        <!-- صورة الموبايل -->
-        <div class="hero-content">
-          <!-- النص -->
-          <div class="hero-information">
-            <div class="hero-text">
-              <h1 class="hero-title">
-                ليش تنتظر بالدور، احجز موعدك الآن!
-              </h1>
-              <p class="hero-description">تطبيق كادي بيوتي هو دليلك الأول الذي يجمع أفضل الصالونات ومراكز السبا،
-                بالإضافة إلى مجموعة واسعة من الخدمات المنزلية التي تأتيكِ حتى باب بيتك! الآن، تصفح واحجز موعدكِ بسهولة
-                في ثلاث خطوات فقط!</p>
-            </div>
-            <div class="hero-boxes">
-              <div class="hero-services">
-                <div class="service-item s-more">
-                  <img src="src/imgs/fi_5498588.png" alt="aa" class="service-item-logo" height="20px">
-                  <span class="service-item-text">شعر</span>
-                </div>
-  
-                <div class="service-item s-massage">
-                  <img src="src/imgs/Nail.png" alt="yy" class="service-item-logo">
-                  <span class="service-item-text">مكياج</span>
-                </div>
-  
-                <div class="service-item s-makeup">
-                  <img src="src/imgs/fi_1414267.png" alt="yy" class="service-item-logo">
-                  <span class="service-item-text">مساج</span>
-                </div>
-  
-                <div class="service-item s-care">
-                  <img src="src/imgs/flat.png" alt="tt" class="service-item-logo">
-                  <span class="service-item-text">عناية باليدين</span>
-                </div>
-  
-                <div class="service-item s-nails">
-                  <img src="src/imgs/XMLID_1_.png" alt="tt" class="service-item-logo">
-                  <span class="service-item-text">سبا</span>
-                </div>
-  
-                <div class="service-item s-hair">
-                  <img src="src/imgs/Group.png" alt="tt" class="service-item-logo">
-                  <span class="service-item-text">وأكثر</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-    </section>
     <!-- Provide-services -->
-    <section class="kadi-home-two" id="kadi-home-two">
-      <div class="kadi-home-two__text" id="kadi-home-twores">
-        <h1 class="kadi-home-two__title">
-          كيف تستمتع بتجربتك الأولى بأفضل شكل
-        </h1>
-        <p class="kadi-home-two__desc">
-          ما أسهل إنك تستمتع بتجربتك الأولى بأفضل شكل! هنا نصايح بسيطة عشان
-          تضمن تجربة مميزة من البداية
-          للنهاية.
-        </p>
-      </div>
+   <section class="kadi-home-two" id="kadi-home-two">
+  <div class="kadi-home-two__text" id="kadi-home-twores">
+    <h1 id="homeTwoTitle" class="kadi-home-two__title">
+      كيف تستمتع بتجربتك الأولى بأفضل شكل
+    </h1>
+    <p id="homeTwoDesc" class="kadi-home-two__desc">
+      ما أسهل إنك تستمتع بتجربتك الأولى بأفضل شكل! هنا نصايح بسيطة عشان
+      تضمن تجربة مميزة من البداية للنهاية.
+    </p>
+  </div>
 
-      <div class="kadi-home-two__boxes">
-        <section class="kadi-boxes">
-          <div class="kadi-boxes__images">
-            <div class="kadi-boxes-all" id="kadiboxesall">
-              <span class="before-kadi">1</span>
-              <!-- Image Box 1 -->
+  <div class="kadi-home-two__boxes">
+    <section class="kadi-boxes">
+      <div class="kadi-boxes__images">
+        <div class="kadi-boxes-all" id="kadiboxesall">
+          <span class="before-kadi">1</span>
 
-              <div class="kadi-three-box">
-                <div class="kadi-image-box">
-                  <img class="kadi-image-box__icon" src="src/imgs/threeimg.png" alt="a" />
-                  <img class="kadi-image-box__divider" src="src/imgs/hrthree.png" alt="sa" />
-                  <img class="kadi-image-box__img" src="src/imgs/threeimgone.png" alt="asa" />
-                </div>
-                <!-- Image Box 2 -->
-                <div class="kadi-image-box">
-                  <img class="kadi-image-box__icon" src="src/imgs/threeimg.png" alt="as" />
-                  <img class="kadi-image-box__divider" src="src/imgs/hrthree.png" alt="a" />
-                  <img class="kadi-image-box__img" src="src/imgs/threeimgone.png" alt="a" />
-                </div>
-
-                <!-- Image Box 3 -->
-                <div class="kadi-image-box">
-                  <img class="kadi-image-box__icon" src="src/imgs/threeimg.png" alt="u" />
-                  <img class="kadi-image-box__divider" src="src/imgs/hrthree.png" alt="uu" />
-                  <img class="kadi-image-box__img" src="src/imgs/threeimgone.png" alt="uu" />
-                </div>
-              </div>
-              <div class="kadi-boxes-text-titles">
-                <h2 class="kadi-text-titles">أختار</h2>
-
-                <h2 class="kadi-text-pragraph">اختار خدمتك الأولى المناسبة لك من الصالونات ومزودي الخدمات.
-                </h2>
-              </div>
+          <div class="kadi-three-box">
+            <div class="kadi-image-box">
+              <img class="kadi-image-box__icon" src="src/imgs/threeimg.png" alt="a" />
+              <img class="kadi-image-box__divider" src="src/imgs/hrthree.png" alt="sa" />
+              <img class="kadi-image-box__img" src="src/imgs/threeimgone.png" alt="asa" />
             </div>
-            <div class="kadi-boxes-all">
-              <span class="before-kadi-one">2</span>
-              <!-- Image Box 1 -->
-              <div class="kadi-three-box">
-                <img src="src/imgs/Frame 1618873200.png" alt="kk" />
-              </div>
-              <div class="kadi-boxes-text-titles">
-                <h2 class="kadi-text-titles">حدد</h2>
-                <h2 class="kadi-text-pragraph">
-                  حدد الوقت والتاريخ و المكان و طريقة الدفع اللي تناسبك وتناسب
-                  أصحابك.
-                </h2>
-              </div>
+
+            <div class="kadi-image-box">
+              <img class="kadi-image-box__icon" src="src/imgs/threeimg.png" alt="as" />
+              <img class="kadi-image-box__divider" src="src/imgs/hrthree.png" alt="a" />
+              <img class="kadi-image-box__img" src="src/imgs/threeimgone.png" alt="a" />
             </div>
-            <div class="kadi-boxes-all">
-              <span class="before-kadi-two">3</span>
-              <!-- Image Box 1 -->
-              <div class="kadi-three-box">
-                <div class="kadi-image-box">
-                  <img class="kadi-image-box__icon" src="src/imgs/threeimg.png" alt="ss" />
-                  <img class="kadi-image-box__divider" src="src/imgs/hrthree.png" alt="ss" />
-                  <img class="kadi-image-box__img" src="src/imgs/threeimgone.png" alt="ss" />
-                </div>
 
-                <!-- Image Box 2 -->
-                <div class="kadi-image-box">
-                  <img class="kadi-image-box__icon" src="src/imgs/threeimg.png" alt="ss" />
-                  <img class="kadi-image-box__divider" src="src/imgs/hrthree.png" alt="ss" />
-                  <img class="kadi-image-box__img" src="src/imgs/threeimgone.png" alt="ss" />
-                </div>
-
-                <!-- Image Box 3 -->
-                <div class="kadi-image-box">
-                  <img class="kadi-image-box__icon" src="src/imgs/threeimg.png" alt="ss" />
-                  <img class="kadi-image-box__divider" src="src/imgs/hrthree.png" alt="ss" />
-                  <img class="kadi-image-box__img" src="src/imgs/threeimgone.png" alt="ss" />
-                </div>
-              </div>
-              <div class="kadi-boxes-text-titles">
-                <h2 class="kadi-text-titles">اجهز</h2>
-
-                <h2 class="kadi-text-pragraph">اجهز لموعد خدمتك المحجوز واستمتع بأجمل اللحظات في صالونك المفضل.
-                </h2>
-              </div>
+            <div class="kadi-image-box">
+              <img class="kadi-image-box__icon" src="src/imgs/threeimg.png" alt="u" />
+              <img class="kadi-image-box__divider" src="src/imgs/hrthree.png" alt="uu" />
+              <img class="kadi-image-box__img" src="src/imgs/threeimgone.png" alt="uu" />
             </div>
           </div>
-        </section>
 
-        <!-- Empty placeholders (لو ليهم استخدام لاحقًا) -->
-        <div class="kadi-home-two__spacer"></div>
-        <div class="kadi-home-two__spacer"></div>
+          <div class="kadi-boxes-text-titles">
+            <h2 id="stepOneTitle" class="kadi-text-titles">أختار</h2>
+            <h2 id="stepOneDesc" class="kadi-text-pragraph">
+              اختار خدمتك الأولى المناسبة لك من الصالونات ومزودي الخدمات.
+            </h2>
+          </div>
+        </div>
+
+        <div class="kadi-boxes-all">
+          <span class="before-kadi-one">2</span>
+          <div class="kadi-three-box">
+            <img src="src/imgs/Frame 1618873200.png" alt="kk" />
+          </div>
+          <div class="kadi-boxes-text-titles">
+            <h2 id="stepTwoTitle" class="kadi-text-titles">حدد</h2>
+            <h2 id="stepTwoDesc" class="kadi-text-pragraph">
+              حدد الوقت والتاريخ و المكان و طريقة الدفع اللي تناسبك وتناسب أصحابك.
+            </h2>
+          </div>
+        </div>
+
+        <div class="kadi-boxes-all">
+          <span class="before-kadi-two">3</span>
+          <div class="kadi-three-box">
+            <div class="kadi-image-box">
+              <img class="kadi-image-box__icon" src="src/imgs/threeimg.png" alt="ss" />
+              <img class="kadi-image-box__divider" src="src/imgs/hrthree.png" alt="ss" />
+              <img class="kadi-image-box__img" src="src/imgs/threeimgone.png" alt="ss" />
+            </div>
+
+            <div class="kadi-image-box">
+              <img class="kadi-image-box__icon" src="src/imgs/threeimg.png" alt="ss" />
+              <img class="kadi-image-box__divider" src="src/imgs/hrthree.png" alt="ss" />
+              <img class="kadi-image-box__img" src="src/imgs/threeimgone.png" alt="ss" />
+            </div>
+
+            <div class="kadi-image-box">
+              <img class="kadi-image-box__icon" src="src/imgs/threeimg.png" alt="ss" />
+              <img class="kadi-image-box__divider" src="src/imgs/hrthree.png" alt="ss" />
+              <img class="kadi-image-box__img" src="src/imgs/threeimgone.png" alt="ss" />
+            </div>
+          </div>
+
+          <div class="kadi-boxes-text-titles">
+            <h2 id="stepThreeTitle" class="kadi-text-titles">اجهز</h2>
+            <h2 id="stepThreeDesc" class="kadi-text-pragraph">
+              اجهز لموعد خدمتك المحجوز واستمتع بأجمل اللحظات في صالونك المفضل.
+            </h2>
+          </div>
+        </div>
       </div>
     </section>
+
+    <div class="kadi-home-two__spacer"></div>
+    <div class="kadi-home-two__spacer"></div>
+  </div>
+</section>
+
     <!-- Features-tabs -->
-    <section class="kadi-Administration" id="tabss">
-      <div class="kadi-Administration-title" id="tabssres">
-        <h1 class="kadi-Administration-title__text">
-          إدارة صالونك أصبحت أسهل مع نظام شامل منزودي الخدمات
-          مكان واحد!
-        </h1>
-        <p class="kadi-Administration-title__desc">
-          في كادي، نحرص على تطوير مراكز التجميل من خلال تقديم حلول مبتكرة
-          وخدمات تنافسية تضمن لك
-          نموًا وجودة أعلى في عملك. اكتشف مميزات النظام
-        </p>
-      </div>
-
-      <div class="tabs-wrapper">
-        <div class="tabs" id="appkadi">
-          <button class="tab active" id="three">
-            <span class="icon-tab" id="icon-tab">
-              <img src="src/imgs/Booking_1_.png" alt="aa" class="icon-tab-image" />
-            </span>
-            جدولة المواعيد
-          </button>
-          <button class="tab" id="two"><span class="icon-tab" id="icon-tab">
-              <img src="src/imgs/Layer_26.png" alt="aa" class="icon-tab-image" />
-            </span>
-            إعداد التقارير والتحليلات</button>
-          <button class="tab" id="one"><span class="icon-tab" id="icon-tab">
-              <img src="src/imgs/Vector (1).png" alt="aa" class="icon-tab-image" />
-            </span>
-            الفواتير الإلكترونية</button>
-        </div>
-      </div>
-      <div class="tab-one " id="page-three">
-        <div class="tab-section-one">
-          <div class="tab-one-left">
-            <span class="tab-one-icon">
-              <img src="src/imgs/Booking_1_.png" class="icon-tab-img" alt="aa" /></span>
-            <h2 class="tab-one-left-title">جدولة المواعيد</h2>
-            <h4 class="tab-one-left-text">
-              استخدم تقويمًا متكاملاً لإدارة الحجوزات والتحكم الكامل
-            </h4>
-            <h5 class="tab-one-left-pragraph">
-              أداة تقويم مرنة وسهلة الاستخدام تيح لك ربط الحجوزات الواردة،
-              والتحكم الكامل في ملفك الشخصي، وإنشاء العروض الخاصة بمرونة.
-            </h5>
-            <button class="tab-one-left-btn" id="btnkadidownload">تحميل التطبيق</button>
-          </div>
-          <div class="tab-one-right">
-            <div class="tab-one-right-box">
-              <img src="src/imgs/image (1).png" alt="aa" class="tab-right-up">
-              <img src="src/imgs/مهسف (1).png" alt="aa" class="tab-right-center">
-              <img src="src/imgs/image (2).png" alt="aa" class="tab-right-down">
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="tab-two  " id="page-one">
-        <div class="tab-section-two">
-          <div class="tab-two-left">
-            <span class="tab-two-icon">
-              <img src="src/imgs/fi_7939880.png" class="icon-tab-img-two" alt="" /></span>
-            <h2 class="tab-two-left-title">الفواتير الإلكترونية</h2>
-            <h4 class="tab-two-left-text">أدر طلبات العملاء وأصدر الفواتير
-            </h4>
-            <h5 class="tab-two-left-pragraph">نظام كادي لإدارة طلبات العملاء يمنحك ميزة الاطلاع على جميع تفاصيل الطلبات
-              والفواتير الإلكترونية و تحميلها بلمسة واحدة..
-            </h5>
-            <button class="tab-two-left-btn">تحميل التطبيق</button>
-          </div>
-          <div class="tab-two-right">
-            <div class="tab-two-right-phone">
-              <img src="src/imgs/Layer_1.png" alt="aa" class="tab-two-right-phone-logo">
-            </div>
-            <div class="tab-two-right-kadi-salon">
-  <div class="icon">⇄</div>
-
-  <h4>Kadi- Salon</h4>
-  <p class="date">1 Nov, 10 Oct 10:20 AM · <span>Paid</span></p>
-
-  <div class="row">
-    <span>Hair Color</span>
-    <strong>750 SAR</strong>
+<section class="kadi-Administration" id="tabss">
+  <div class="kadi-Administration-title" id="tabssres">
+    <h1 id="adminTitle" class="kadi-Administration-title__text">
+      إدارة صالونك أصبحت أسهل مع نظام شامل منزودي الخدمات مكان واحد!
+    </h1>
+    <p id="adminDesc" class="kadi-Administration-title__desc">
+      في كادي، نحرص على تطوير مراكز التجميل من خلال تقديم حلول مبتكرة وخدمات تنافسية تضمن لك نموًا وجودة أعلى في عملك. اكتشف مميزات النظام
+    </p>
   </div>
 
-  <div class="row coupon">
-    <span>Coupon</span>
-    <strong>-100 SAR</strong>
-  </div>
+ <div class="tabs-wrapper">
+  <div class="tabs" id="appkadi">
+    
+    <button class="tab active" id="three">
+      <h1 class="icon-tab">
+        <img src="src/imgs/Booking_1_.png" alt="aa" class="icon-tab-image" />
+      </h1>
+      <span class="full-text" id="tabBookingText">جدولة المواعيد</span>
+      <span class="short-text" id="tabBookingText_short">جم</span>
+    </button>
 
-  <hr />
+    <button class="tab" id="two">
+      <h1 class="icon-tab">
+        <img src="src/imgs/Layer_26.png" alt="aa" class="icon-tab-image" />
+      </h1>
+      <span class="full-text" id="tabReportsText">إعداد التقارير والتحليلات</span>
+      <span class="short-text" id="tabReportsText_short">تق</span>
+    </button>
 
-  <div class="row total">
-    <span>Total</span>
-    <strong>1400 SAR</strong>
+    <button class="tab" id="one">
+      <h1 class="icon-tab">
+        <img src="src/imgs/Vector (1).png" alt="aa" class="icon-tab-image" />
+      </h1>
+      <span class="full-text" id="tabInvoicesText">الفواتير الإلكترونية</span>
+      <span class="short-text" id="tabInvoicesText_short">فو</span>
+    </button>
+    
   </div>
 </div>
 
-          </div>
+  <!-- Tab One -->
+  <div class="tab-one" id="page-three">
+    <div class="tab-section-one">
+      <div class="tab-one-left">
+        <span class="tab-one-icon">
+          <img src="src/imgs/Booking_1_.png" class="icon-tab-img" alt="aa" />
+        </span>
+        <h2 id="bookingTitle" class="tab-one-left-title">جدولة المواعيد</h2>
+        <h4 id="bookingSubTitle" class="tab-one-left-text">
+          استخدم تقويمًا متكاملاً لإدارة الحجوزات والتحكم الكامل
+        </h4>
+        <h5 id="bookingDesc" class="tab-one-left-pragraph">
+          أداة تقويم مرنة وسهلة الاستخدام تيح لك ربط الحجوزات الواردة، والتحكم الكامل في ملفك الشخصي، وإنشاء العروض الخاصة بمرونة.
+        </h5>
+        <button id="bookingBtn"  class="tab-one-left-btn">تحميل التطبيق</button>
+      </div>
 
+      <div class="tab-one-right">
+        <div class="tab-one-right-box">
+          <img src="src/imgs/image (1).png" alt="aa" class="tab-right-up">
+       <div class="tab-right-center">
+          <div class="booking-card">
+  <h3 id="bookingtitle">حجوزاتك القادمة</h3>
+
+  <div class="booking-item">
+    <div class="booking-time" id="time1">28 Dec. 4:30 PM</div>
+    <div class="booking-user">
+      <span id="name1">Aya Ali</span>
+      <img src="https://i.pravatar.cc/40?img=32" alt="Aya">
+    </div>
+  </div>
+
+  <div class="booking-item">
+    <div class="booking-time" id="time2">28 Dec. 5:30 PM</div>
+    <div class="booking-user">
+      <span id="name2">Mahmoud</span>
+      <img src="https://i.pravatar.cc/40?img=12" alt="Mahmoud">
+    </div>
+  </div>
+
+  <div class="booking-item">
+    <div class="booking-time" id="time3">28 Dec. 6:00 PM</div>
+    <div class="booking-user">
+      <span id="name3">Asmaa</span>
+      <img src="https://i.pravatar.cc/40?img=47" alt="Asmaa">
+    </div>
+  </div>
+
+  <div class="booking-item">
+    <div class="booking-time" id="time4">28 Dec. 8:30 PM</div>
+    <div class="booking-user">
+      <span id="name4">Hashim</span>
+      <img src="https://i.pravatar.cc/40?img=14" alt="Hashim">
+    </div>
+  </div>
+</div>
+</div>
+          <img src="src/imgs/image (2).png" alt="aa" class="tab-right-down">
         </div>
       </div>
-      <div class="tab-three  " id="page-two">
-        <div class="tab-section-three">
-          <div class="tab-three-left">
-            <span class="tab-three-icon">
-              <img src="src/imgs/Layer_26.png" class="icon-tab-img" alt="" /></span>
-            <h2 class="tab-three-left-title">إعداد التقارير والتحليلات</h2>
-            <h4 class="tab-three-left-text">
-              اتخذ قرارات مدعومة بالإحصائيات والتقارير
-            </h4>
-            <h5 class="tab-three-left-pragraph">
-              استخدام إحصائياتك لاتخاذ قرارات عمل أفضل و المساعدة في انتشارية أكبر من خلال لوحة المعلومات والتقارير
-              المالية.
-            </h5>
-            <button class="tab-three-left-btn" id="btndwon">تحميل التطبيق</button>
-          </div>
-          <div class="tab-three-right">
+    </div>
+  </div>
 
-            <div class="tab-center-up">
-              <img src="src/imgs/image (3).png" alt="">
-            </div>
-            <div class="tab-three-right-box">
+  <!-- Tab Two -->
+  <div class="tab-two" id="page-one">
+    <div class="tab-section-two">
+      <div class="tab-two-left">
+        <span class="tab-two-icon">
+          <img src="src/imgs/fi_7939880.png" class="icon-tab-img-two" alt="" />
+        </span>
+        <h2 id="invoiceTitle" class="tab-two-left-title">الفواتير الإلكترونية</h2>
+        <h4 id="invoiceSubTitle" class="tab-two-left-text">أدر طلبات العملاء وأصدر الفواتير</h4>
+        <h5 id="invoiceDesc" class="tab-two-left-pragraph">
+          نظام كادي لإدارة طلبات العملاء يمنحك ميزة الاطلاع على جميع تفاصيل الطلبات والفواتير الإلكترونية و تحميلها بلمسة واحدة..
+        </h5>
+        <button id="invoiceBtn" class="tab-two-left-btn">تحميل التطبيق</button>
+      </div>
 
-              <div class="chart-box">
-                <div class="bars">
-                  <div class="bar-item">
-                    <span class="price">800 ر.س</span>
-                    <div class="bar bar-light" style="height:40%"></div>
-                    <span class="date">18 يناير</span>
-                  </div>
+      <div class="tab-two-right">
+        <div class="tab-two-right-phone">
+          <img src="src/imgs/Layer_1.png" alt="aa" class="tab-two-right-phone-logo">
+        </div>
 
-                  <div class="bar-item">
-                    <span class="price">1500 ر.س</span>
-                    <div class="bar bar-light" style="height:65%"></div>
-                    <span class="date">17 يناير</span>
-                  </div>
+        <div class="tab-two-right-kadi-salon">
+          <div class="icon">⇄</div>
+          <h4 id="invoiceCardTitle">Kadi Salon</h4>
+          <p class="date" id="invoiceCardDate">1 Nov, 10 Oct 10:20 AM · <span id="invoiceStatus">Paid</span></p>
 
-                  <div class="bar-item">
-                    <span class="price">1800 ر.س</span>
-                    <div class="bar bar-light" style="height:80%"></div>
-                    <span class="date">16 يناير</span>
-                  </div>
-
-                  <div class="bar-item">
-                    <span class="price">820 ر.س</span>
-                    <div class="bar bar-light" style="height:45%"></div>
-                    <span class="date">15 يناير</span>
-                  </div>
-
-                  <div class="bar-item">
-                    <span class="price">1800 ر.س</span>
-                    <div class="bar bar-light" style="height:80%"></div>
-                    <span class="date">14 يناير</span>
-                  </div>
-
-                  <div class="bar-item active">
-                    <span class="price">2000 ر.س</span>
-                    <div class="bar bar-dark" style="height:100%"></div>
-                    <span class="date">13 يناير</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tab-center-down">
-                <div class="tab-center-down-text">إجمالي الايرادات</div>
-                <div class="tab-center-down-num">
-                  <div class="tab-center-down-num-right">
-                    <h3>إرتفاع</h3>
-                    <img src="src/imgs/Polygon 2.png" alt="">
-                  </div>
-                  <div class="tab-center-down-num-left">
-                    14%
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="row">
+            <span id="invoiceService">Hair Color</span>
+            <strong id="invoiceServicePrice">750 SAR</strong>
           </div>
 
+          <div class="row coupon">
+            <span id="invoiceCoupon">Coupon</span>
+            <strong id="invoiceCouponPrice">-100 SAR</strong>
+          </div>
+
+          <hr />
+
+          <div class="row total">
+            <span id="invoiceTotal">Total</span>
+            <strong id="invoiceTotalPrice">1400 SAR</strong>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+
+  <!-- Tab Three -->
+  <div class="tab-three" id="page-two">
+    <div class="tab-section-three">
+      <div class="tab-three-left">
+        <span class="tab-three-icon">
+          <img src="src/imgs/Layer_26.png" class="icon-tab-img" alt="" />
+        </span>
+        <h2 id="reportsTitle" class="tab-three-left-title">إعداد التقارير والتحليلات</h2>
+        <h4 id="reportsSubTitle" class="tab-three-left-text">
+          اتخذ قرارات مدعومة بالإحصائيات والتقارير
+        </h4>
+        <h5 id="reportsDesc" class="tab-three-left-pragraph">
+          استخدام إحصائياتك لاتخاذ قرارات عمل أفضل و المساعدة في انتشارية أكبر من خلال لوحة المعلومات والتقارير المالية.
+        </h5>
+        <button id="reportsBtn" class="tab-three-left-btn">تحميل التطبيق</button>
+      </div>
+
+      <div class="tab-three-right">
+        <div class="tab-center-up">
+          <img src="src/imgs/image (3).png" class="tab-center-uo-img" alt="">
+        </div>
+
+        <div class="tab-three-right-box">
+          <div class="chart-box">
+            <div class="bars">
+              <div class="bar-item">
+                <span class="price">800 ر.س</span>
+                <div class="bar bar-light" style="height:40%"></div>
+                <span class="date">18 يناير</span>
+              </div>
+
+              <div class="bar-item">
+                <span class="price">1500 ر.س</span>
+                <div class="bar bar-light" style="height:65%"></div>
+                <span class="date">17 يناير</span>
+              </div>
+
+              <div class="bar-item">
+                <span class="price">1800 ر.س</span>
+                <div class="bar bar-light" style="height:80%"></div>
+                <span class="date">16 يناير</span>
+              </div>
+
+              <div class="bar-item">
+                <span class="price">820 ر.س</span>
+                <div class="bar bar-light" style="height:45%"></div>
+                <span class="date">15 يناير</span>
+              </div>
+
+              <div class="bar-item">
+                <span class="price">1800 ر.س</span>
+                <div class="bar bar-light" style="height:80%"></div>
+                <span class="date">14 يناير</span>
+              </div>
+
+              <div class="bar-item active">
+                <span class="price">2000 ر.س</span>
+                <div class="bar bar-dark" style="height:100%"></div>
+                <span class="date">13 يناير</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-center-down">
+            <div id="revenueLabel" class="tab-center-down-text">إجمالي الايرادات</div>
+            <div class="tab-center-down-num">
+              <div class="tab-center-down-num-right">
+                <h3 id="revenueStatus">إرتفاع</h3>
+                <img src="src/imgs/Polygon 2.png" alt="">
+              </div>
+              <div id="revenuePercent" class="tab-center-down-num-left">
+                14%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     <!-- accordions -->
-    <section class="accordion-section"  id="accor">
-      <div class="accordion-text" id="accorres">
-        <h1 class="accordion-text-title">الأسئلة الشائعة</h1>
-        <p class="accordion-text-pragraph">أجوبة سريعة لأكثر الأسئلة شيوعاً حول استخدام التطبيق.</p>
-      </div>
-      <div class="acordion-suggestions">
-        <div class="panel">
-          <div class="panel-title">كيف أقدر أحجز خدمة؟</div>
-          <h6 class="panel-content">تقدر تحجز الخدمة عن طريق اختيار مقدم الخدمة المناسب، ثم تحديد الخدمة المطلوبة
-            واختيار التاريخ والوقت المناسبين، وبعدها تأكيد الحجز.</h6>
-        </div>
-        <div class="panel">
-          <div class="panel-title">هل أقدر أعدل أو ألغي الحجز؟</div>
-          <h6 class="panel-content">نعم، يمكنك تعديل أو إلغاء الحجز من صفحة حجوزاتي قبل موعد الخدمة بوقت كافٍ، وفق سياسة
-            الإلغاء المعتمدة.</h6>
-        </div>
-        <div class="panel">
-          <div class="panel-title">كيف أعرف إذا تم تأكيد الحجز؟</div>
-          <h6 class="panel-content">بعد إتمام الحجز، ستصلك رسالة تأكيد عبر التطبيق، كما يمكنك متابعة حالة الحجز من خلال
-            صفحة حجوزاتي.</h6>
-        </div>
-        <div class="panel">
-          <div class="panel-title">وش يصير إذا ألغى مقدم الخدمة موعدي؟</div>
-          <h6 class="panel-content ">في حال قام مقدم الخدمة بإلغاء الموعد، سيتم إشعارك فورًا، ويمكنك إعادة الحجز مع نفس
-            المقدم أو اختيار مقدم خدمة آخر في الوقت المناسب لك.</h6>
-        </div>
-        <div class="panel">
-          <div class="panel-title">هل أقدر أحجز موعد لشخص ثاني؟</div>
-          <h6 class="panel-content">نعم، تقدر تحجز موعد لشخص آخر بكل سهولة. أثناء عملية الحجز يمكنك إدخال بيانات الشخص
-            المستفيد من الخدمة بدلًا من بياناتك.</h6>
-        </div>
-        <div class="panel">
-          <div class="panel-title">كيف أشوف المواعيد القادمة؟</div>
-          <h6 class="panel-content">تقدر تشوف جميع مواعيدك القادمة من خلال قسم حجوزاتي داخل التطبيق، حيث يتم عرض
-            التفاصيل الكاملة لكل موعد.</h6>
-        </div>
-      </div>
-    </section>
+ <section class="accordion-section" id="accor">
+  <div class="accordion-text" id="accorres">
+    <h1 id="accordionTitle" class="accordion-text-title">الأسئلة الشائعة</h1>
+    <p id="accordionDesc" class="accordion-text-pragraph">
+      أجوبة سريعة لأكثر الأسئلة شيوعاً حول استخدام التطبيق.
+    </p>
+  </div>
+
+  <div class="acordion-suggestions">
+    <div class="panel">
+      <div id="q1Title" class="panel-title">كيف أقدر أحجز خدمة؟</div>
+      <h6 id="q1Content" class="panel-content">
+        تقدر تحجز الخدمة عن طريق اختيار مقدم الخدمة المناسب، ثم تحديد الخدمة المطلوبة واختيار التاريخ والوقت المناسبين، وبعدها تأكيد الحجز.
+      </h6>
+    </div>
+
+    <div class="panel">
+      <div id="q2Title" class="panel-title">هل أقدر أعدل أو ألغي الحجز؟</div>
+      <h6 id="q2Content" class="panel-content">
+        نعم، يمكنك تعديل أو إلغاء الحجز من صفحة حجوزاتي قبل موعد الخدمة بوقت كافٍ، وفق سياسة الإلغاء المعتمدة.
+      </h6>
+    </div>
+
+    <div class="panel">
+      <div id="q3Title" class="panel-title">كيف أعرف إذا تم تأكيد الحجز؟</div>
+      <h6 id="q3Content" class="panel-content">
+        بعد إتمام الحجز، ستصلك رسالة تأكيد عبر التطبيق، كما يمكنك متابعة حالة الحجز من خلال صفحة حجوزاتي.
+      </h6>
+    </div>
+
+    <div class="panel">
+      <div id="q4Title" class="panel-title">وش يصير إذا ألغى مقدم الخدمة موعدي؟</div>
+      <h6 id="q4Content" class="panel-content">
+        في حال قام مقدم الخدمة بإلغاء الموعد، سيتم إشعارك فورًا، ويمكنك إعادة الحجز مع نفس المقدم أو اختيار مقدم خدمة آخر في الوقت المناسب لك.
+      </h6>
+    </div>
+
+    <div class="panel">
+      <div id="q5Title" class="panel-title">هل أقدر أحجز موعد لشخص ثاني؟</div>
+      <h6 id="q5Content" class="panel-content">
+        نعم، تقدر تحجز موعد لشخص آخر بكل سهولة. أثناء عملية الحجز يمكنك إدخال بيانات الشخص المستفيد من الخدمة بدلًا من بياناتك.
+      </h6>
+    </div>
+
+    <div class="panel">
+      <div id="q6Title" class="panel-title">كيف أشوف المواعيد القادمة؟</div>
+      <h6 id="q6Content" class="panel-content">
+        تقدر تشوف جميع مواعيدك القادمة من خلال قسم حجوزاتي داخل التطبيق، حيث يتم عرض التفاصيل الكاملة لكل موعد.
+      </h6>
+    </div>
+  </div>
+</section>
+
     <!-- Footer-Kadi -->
-    <footer class="footer-sec" id="footer">
+   <footer class="footer-sec" id="footer">
 
-      <div class="footer-logo" id="footerres">
-        <img src="src/imgs/footer-logo.png" alt="footer-logo" class="footer-img-logo">
-      </div>
-      <div class="footer-data">
+  <div class="footer-logo" id="footerres">
+    <img src="src/imgs/footer-logo.png" alt="footer-logo" class="footer-img-logo">
+  </div>
 
-        <div class="footer-contact">
-          <h2 class="footer-title">اتصل بنا</h2>
-          <p class="contact-phone">16781</p>
-          <p class="contact-email">contact_us@valu.com.eg</p>
-          <p class="contact-address">
-            ميدان أركان، مدينة الشيخ زايد، الطابق الأول وحدة AW-0154
-          </p>
-        </div>
-        <div class="footer-copy">
-          ©  حقوق النشر 2020-2024. جميع الحقوق محفوظة. Kadi Beauty, تطبيق كادي بيوتي.</div>
-      </div>
-      <div class="footer-data-too">
-        <div class="footer-socialmedia">
-          <h1 class="footer-title-social">تابعونا علي وسائل التواصل الأجتماعي</h1>
-          <div class="social-icons">
-            <a href="https://x.com/"> <img class="social-icon-footer" src="src/imgs/x.png" alt="x" /></a>
-            <a href="https://www.instagram.com/"> <img class="social-icon-footer"
-                src="src/imgs/62f88b2f2697066503c85b23_instagram.svg.png" alt="instagram" /></a>
-            <a href="https://dribbble.com/"> <img class="social-icon-footer"
-                src="src/imgs/62f88b2f071b67671ed1adeb_dribbble.svg.png" alt="dribble" /></a>
-            <a href="https://www.google.com/"><img class="social-icon-footer"
-                src="src/imgs/62f88b2e61544309251a95da_email.svg.png" alt="email" /></a>
-          </div>
-        </div>
+  <div class="footer-data">
 
-        <div class="footer-links">
-          <a href="#" class="footer-link">الخصوصية</a>
-          <a href="#" class="footer-link">البنود</a>
-        </div>
+    <div class="footer-contact">
+      <span id="footerContactTitle" class="footer-title">اتصل بنا</span>
+      <span id="footerPhone" class="contact-phone">16781</span>
+      <span id="footerEmail" class="contact-email">contact_us@valu.com.eg</span>
+      <span id="footerAddress" class="contact-address">
+        ميدان أركان، مدينة الشيخ زايد، الطابق الأول وحدة AW-0154
+      </span>
+    </div>
+
+    <span id="footerCopy" class="footer-copy">
+      ©  حقوق النشر 2020-2024. جميع الحقوق محفوظة. Kadi Beauty, تطبيق كادي بيوتي.
+    </span>
+
+  </div>
+
+  <div class="footer-data-too">
+
+    <div class="footer-socialmedia">
+      <span id="footerSocialTitle" class="footer-title-social">تابعونا علي وسائل التواصل الأجتماعي</span>
+      <div class="social-icons">
+        <a href="https://x.com/"> <img class="social-icon-footer" src="src/imgs/x.png" alt="x" /></a>
+        <a href="https://www.instagram.com/"> <img class="social-icon-footer"
+            src="src/imgs/62f88b2f2697066503c85b23_instagram.svg.png" alt="instagram" /></a>
+        <a href="https://dribbble.com/"> <img class="social-icon-footer"
+            src="src/imgs/62f88b2f071b67671ed1adeb_dribbble.svg.png" alt="dribble" /></a>
+        <a href="https://www.google.com/"><img class="social-icon-footer"
+            src="src/imgs/62f88b2e61544309251a95da_email.svg.png" alt="email" /></a>
       </div>
-    </footer>
+    </div>
+
+    <div class="footer-links">
+      <a href="#" id="footerPrivacy" class="footer-link">الخصوصية</a>
+      <a href="#" id="footerTerms" class="footer-link">البنود</a>
+    </div>
+
+  </div>
+</footer>
+
 
   </div> 
   <script src="js/kadi.js"></script>
-<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
 
 </body>

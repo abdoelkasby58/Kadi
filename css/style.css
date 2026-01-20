@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   /* font-family: "DIN Next LT Arabic", Arial, sans-serif; */
 
   line-height: 140%;
@@ -163,14 +163,14 @@ html[lang="en"] {
   font-size: 14px;
   font-weight: 400;
 }
-.login-inp a {
+#linkforget {
   background-color: transparent;
   color: rgba(0, 44, 109, 1);
   position: absolute;
   font-size: 16px;
   text-decoration: none;
   margin-top: 10px;
-  bottom: 135px;
+  bottom: 182px;
   /* top: 141px; */
   inset-inline-end: 0px;
   cursor: pointer;
@@ -253,7 +253,7 @@ html[lang="en"] {
   background-color: transparent;
   position: absolute;
   top: 115px;
-  inset-inline-end: 0px;
+  inset-inline-start: 0px;
   color: red;
   font-size: 11px;
   padding: 0px 3px;
@@ -291,7 +291,7 @@ html[lang="en"] {
   background-color: transparent;
   position: absolute;
   top: 123px;
-  inset-inline-end: 2px;
+  inset-inline-start: 2px;
   color: red;
   font-size: 11px;
   padding: 0px 3px;
@@ -301,7 +301,7 @@ html[lang="en"] {
   background-color: transparent;
   position: absolute;
   bottom: 55px;
-  inset-inline-end: 2px;
+  inset-inline-start: 2px;
   color: red;
   font-size: 11px;
   padding: 0px 3px;
@@ -310,8 +310,8 @@ html[lang="en"] {
 .passwordError {
   background-color: transparent;
   position: absolute;
-  bottom: 161px;
-  inset-inline-end: 0px;
+  bottom: 202px;
+  inset-inline-start: 0px;
   color: red;
   font-size: 11px;
   padding: 0px 3px;
@@ -407,6 +407,123 @@ display: none;
 }
 .visibilityconfirm {
   display: block;
+}
+.login-title-create {
+  /* background-color: #ffffff; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding-top: 95px;
+  padding-inline: 40px;
+}
+.login-title-create h1 {
+  background-color: #ffffff;
+  color: rgba(0, 44, 109, 1);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+}
+.login-title-create p {
+  /* background-color: #ffffff; */
+  color: rgba(107, 114, 128, 1);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.4;
+  line-height: 100%;
+}
+.createaccount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 16px;
+  gap: 4px;
+  justify-content: center;
+}
+.pragraphcreate {
+  font-size: 16px;
+  font-weight: 400;
+}
+.link-create {
+  font-weight: 400;
+  font-size: 18px;
+  color: rgba(0, 44, 109, 1);
+  cursor: pointer;
+  z-index: 2;
+}
+.emailerrorcreate,
+.passwordErrorCreate,
+.email-error-confirm-create {
+  background-color: transparent;
+  position: absolute;
+  bottom: 140px;
+  inset-inline-start: 0px;
+  color: red;
+  font-size: 11px;
+  padding: 0px 3px;
+  display: none;
+}
+.emailerrorcreate {
+  top: 113px;
+}
+.passwordErrorCreate {
+  bottom: 237px;
+}
+.login-btn-create {
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  padding-top: 0;
+  /* padding-bottom: 161px; */
+}
+.btn-login-create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 451px;
+  height: 56px;
+  border: none;
+  background-color: rgba(100, 62, 150, 1);
+  color: #ffffff;
+  border-radius: 12px;
+  transition: all 0.3s;
+  margin-top: 10px;
+  padding: 10px 0px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.visibilitycreate,
+.visibilityoffcreate {
+  background-color: transparent;
+  color: rgba(107, 114, 128, 1);
+  width: 21px;
+  height: 20px;
+  position: absolute;
+  font-size: 24px;
+  top: 179px;
+  inset-inline-end: 12px;
+  cursor: pointer;
+}
+.visibilityoffcreate,
+.visibilityoffconfirmcreate {
+  display: none;
+}
+.visibilityconfirmcreate,
+.visibilityoffconfirmcreate {
+  background-color: transparent;
+  color: rgba(107, 114, 128, 1);
+  width: 21px;
+  height: 20px;
+  position: absolute;
+  font-size: 24px;
+  top: 275px;
+  inset-inline-end: 12px;
+  cursor: pointer;
+  bottom: 202px;
 }
 
 .iconify-icon {
@@ -612,6 +729,22 @@ display: none;
     font-weight: 500;
     margin-bottom: 67px;
   }
+  .btn-login-create {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 251px;
+    height: 28px;
+    border: none;
+    background-color: rgba(100, 62, 150, 1);
+    color: #ffffff;
+    border-radius: 12px;
+    transition: all 0.3s;
+    margin-top: 10px;
+    padding: 10px 0px;
+    font-size: 10px;
+    font-weight: 500;
+  }
   .btm-login:hover {
     background-color: #777;
     border-radius: 12px;
@@ -637,6 +770,19 @@ display: none;
     /* padding-bottom: 9px; */
     padding-top: 10px;
   }
+  
+#linkforget {
+  background-color: transparent;
+  color: rgba(0, 44, 109, 1);
+  position: absolute;
+  font-size: 12px;
+  text-decoration: none;
+  margin-top: 10px;
+  bottom: 130px;
+  /* top: 141px; */
+  inset-inline-end: 0px;
+  cursor: pointer;
+}
   #email-label {
     position: absolute;
     bottom: 23px;
@@ -657,13 +803,40 @@ display: none;
     background-color: transparent;
     position: absolute;
     top: 87px;
-    inset-inline-end: 0px;
+    inset-inline-start: 0px;
     color: red;
     font-size: 8px;
     padding: 0px 3px;
     display: none;
   }
-
+  .login-title-create {
+    /* background-color: #ffffff; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-top: 80px;
+    padding-inline: 12px;
+  }
+  .login-title-create h1 {
+    background-color: #ffffff;
+    color: rgba(0, 44, 109, 1);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 100%;
+  }
+  .login-title-create p {
+    /* background-color: #ffffff; */
+    color: rgba(107, 114, 128, 1);
+    font-size: 11px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.4;
+    line-height: 100%;
+  }
+  
+  
+ 
   .login-btn {
     /* background-color: #ffffff; */
     width: 100%;
@@ -673,6 +846,14 @@ display: none;
     margin-top: 35px;
     padding-top: 0;
     /* padding-bottom: 161px; */
+  }
+  .login-btn-create {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    padding-top: 0;
   }
   .login-btn-confirm {
     /* background-color: #ffffff; */
@@ -692,11 +873,30 @@ display: none;
     /* padding-top: 48px; */
     padding-bottom: 95px;
   }
+  .createaccount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 12px;
+  gap: 4px;
+  justify-content: center;
+}
+.pragraphcreate {
+  font-size: 10px;
+  font-weight: 400;
+}
+.link-create {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(0, 44, 109, 1);
+  cursor: pointer;
+  z-index: 2;
+}
   .emailerrorconfirm {
     background-color: transparent;
     position: absolute;
-    top: 71px;
-    inset-inline-end: 2px;
+    top: 70px;
+    inset-inline-start: 2px;
     color: red;
     font-size: 9px;
     padding: 0px 3px;
@@ -705,8 +905,8 @@ display: none;
   .emailerrorconfirmone {
     background-color: transparent;
     position: absolute;
-    top: 133px;
-    inset-inline-end: 2px;
+    top: 131px;
+    inset-inline-start: 2px;
     color: red;
     font-size: 9px;
     padding: 0px 3px;
@@ -715,8 +915,8 @@ display: none;
   .passwordError {
     background-color: transparent;
     position: absolute;
-    bottom: 115px;
-    inset-inline-end: 0px;
+    bottom: 145px;
+    inset-inline-start: 0px;
     color: red;
     font-size: 8px;
     padding: 0px 3px;
@@ -736,7 +936,7 @@ display: none;
     background-color: transparent;
     position: absolute;
     bottom: 42px;
-    inset-inline-end: 0px;
+    inset-inline-start: 0px;
     color: red;
     font-size: 9px;
     padding: 0px 3px;
@@ -744,6 +944,24 @@ display: none;
   }
   #language-selector {
     transition: all 0.3s;
+  }
+  .emailerrorcreate,
+  .passwordErrorCreate,
+  .email-error-confirm-create {
+    background-color: transparent;
+    position: absolute;
+    bottom: 85px;
+    inset-inline-start: 0px;
+    color: red;
+    font-size: 8px;
+    padding: 0px 3px;
+    display: none;
+  }
+  .emailerrorcreate {
+    top: 87px;
+  }
+  .passwordErrorCreate {
+    bottom: 146px;
   }
   .hideindex {
     outline: none;
@@ -808,4 +1026,32 @@ display: none;
   .visibilityconfirm {
     display: block;
   }
+  
+  .visibilitycreate,
+  .visibilityoffcreate {
+    background-color: transparent;
+    color: rgba(107, 114, 128, 1);
+    width: 21px;
+    height: 20px;
+    position: absolute;
+    font-size: 16px;
+    top: 127px;
+    inset-inline-end: 4px;
+    cursor: pointer;
+  }
+
+  .visibilityconfirmcreate,
+  .visibilityoffconfirmcreate {
+    background-color: transparent;
+    color: rgba(107, 114, 128, 1);
+    width: 21px;
+    height: 20px;
+    position: absolute;
+    font-size:16px;
+    top: 188px;
+    inset-inline-end: 4px;
+    cursor: pointer;
+    bottom: 202px;
+  }
+
 }

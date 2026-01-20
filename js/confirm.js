@@ -74,7 +74,7 @@ let PasswordConfirm = document.getElementById(`passwordconfirm`);
 let PasswordConfirmtoo = document.getElementById(`passwordConfirmtoo`);
 let ErrorPass = document.getElementById(`passworderrorconfirm`);
 let ErrorPasstoo = document.getElementById(`passworderrorconfirmtoo`);
-const passwordRegexcon = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,15}$/;
+const passwordRegexcon = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
 window.onload = function () {
   PasswordConfirm.focus();
 };
@@ -86,7 +86,7 @@ PasswordConfirmtoo.addEventListener(`input`, () => {
 });
 
 let visibilityoffnewconfirm = document.getElementById(
-  "visibility-offnewconfirm"
+  "visibility-offnewconfirm",
 );
 let visibilitynewconfirm = document.getElementById("visibilitynewconfirm");
 
@@ -129,25 +129,20 @@ FormConfirm.addEventListener(`submit`, function (event) {
     ErrorPasstoo.style.display = `block`;
     errorConfirm = true;
   }
-  if (Valuepass !== Valuepasstoo) {
-    ErrorPasstoo.style.display = `block`;
-    return;
-  }
-  Passregex = false;
   if (
     !passwordRegexcon.test(Valuepasstoo) &&
     !passwordRegexcon.test(Valuepass)
   ) {
     ErrorPass.style.display = `block`;
     ErrorPasstoo.style.display = `display`;
-    Passregex = true;
+    errorConfirm = true;
   }
-  if (errorConfirm) return;
-  localStorage.setItem("passwordnew", Valuepass);
-  localStorage.setItem("passwordconfirm", Valuepasstoo);
-  if (Passregex) return;
-  window.location.href = `index.html`;
+  if (Valuepass !== Valuepasstoo) {
+    ErrorPasstoo.style.display = `block`;
+    return;
+  }
 
+  if (errorConfirm) return;
   let email = localStorage.getItem("tempEmail");
 
   if (!email) {
@@ -155,12 +150,12 @@ FormConfirm.addEventListener(`submit`, function (event) {
     window.location.href = "forgetemail.html";
     return;
   }
-
-  localStorage.setItem("Email", email);
-  localStorage.setItem("Password", Valuepasstoo);
-
+  localStorage.setItem("userEmail", email);
+  localStorage.setItem("userpassword", Valuepasstoo);
+  localStorage.setItem("isLoggedIn", "false");
   localStorage.removeItem("tempEmail");
 
-  alert("تم إنشاء الحساب بنجاح");
+  alert("تم تحديث الباسورد بنجاح");
+
   window.location.href = "index.html";
 });

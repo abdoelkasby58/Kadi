@@ -19,6 +19,8 @@ const content = {
       emailFiled: `أدخل البريد الإلكتروني الجديد`,
       password: `أدخل كلمة المرور الجديدة`,
     },
+    createaccountp: `ليس لديك حساب؟`,
+    createaccountlink: `إنشاء حساب`,
   },
   eng: {
     h1: `Welcome back`,
@@ -36,6 +38,8 @@ const content = {
       emailFiled: `Enter new email`,
       password: `Enter new password`,
     },
+    createaccountp: `Don't have an account?`,
+    createaccountlink: `Create an account`,
   },
 };
 
@@ -44,7 +48,7 @@ langSelctor.addEventListener("change", Updateindex, hideLang);
 
 document.addEventListener("DOMContentLoaded", () => {
   langSelctor.addEventListener("change", () => {
-    localStorage.setItem("langg", langSelctor.value);
+    localStorage.setItem("lang", langSelctor.value);
     Updateindex();
     // hideLang();
   });
@@ -107,7 +111,7 @@ linkforgetlink.addEventListener(`click`, () => {
 window.onload = function () {
   textEmail.focus();
 };
-textEmail.addEventListener(`input`, () => { 
+textEmail.addEventListener(`input`, () => {
   emailerror.style.display = `none`;
 });
 textPass.addEventListener(`input`, () => {
@@ -165,8 +169,8 @@ formEl.addEventListener("submit", function (event) {
     passerror.style.display = "none";
   }
 
-  let savedEmail = localStorage.getItem("Email");
-  let savedPassword = localStorage.getItem("Password");
+  let savedEmail = localStorage.getItem("userEmail");
+  let savedPassword = localStorage.getItem("userpassword");
 
   if (!savedEmail || !savedPassword) {
     emailerror.style.display = "block";
@@ -181,15 +185,19 @@ formEl.addEventListener("submit", function (event) {
     localStorage.setItem("isLoggedIn", "true");
     window.location.href = "loading.html";
     loginkadi = true;
-  } else {
-    // passerror.style.color = "red";
-    emailerror.style.display = "block";
-    passerror.style.display = "block";
-    loginkadi = false;
   }
+  //else {
+  //   // passerror.style.color = "red";
+  //   emailerror.style.display = "block";
+  //   passerror.style.display = "block";
+  //   loginkadi = false;
+  // }
 
-
-  
   if (loginkadi) return;
 });
 let logout;
+
+let creatEaccountlink = document.getElementById("createaccountlink");
+creatEaccountlink.addEventListener("click", () => {
+  window.location.href = "createanaccount.html";
+});

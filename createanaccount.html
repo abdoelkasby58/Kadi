@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kadi | كادي</title>
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="src/fonts/Zain-LightItalic.ttf">
+</head>
+<body>
+<header class="nav-bar-login">
+      <div class="header-left">
+        <img src="src/imgs/Kadi-logo.png" alt="Kadi-logo" />
+      </div>
+      <div class="header-right">
+        <label for="cars" class="language-icon"
+          ><iconify-icon
+            icon="material-symbols:language"
+            class="iconify-icon"
+          ></iconify-icon
+        ></label>
+
+        <select id="language-selector-create" class="lan">
+          <option value="en" id="ENG" selected>EN</option>
+          <option value="ar" id="ARB">AR</option>
+        </select>
+      </div>
+    </header>
+    <!-- Login -->
+    <section class="loginsec">
+      <section class="login">
+        <div class="login-title-create" id="login-title">
+          <h1 id="h1create"></h1>
+          <p id="pcreate"></p>
+        </div>
+
+        <div id="errorcreate"></div>
+        <form action="" id="formcreate" novalidate>
+          <div class="login-inp">
+            <label for="emailFiled" id="Emailindexcreate" class="labelEmail"
+              >Email</label
+            >
+            <input
+              type="email"
+              spellcheck="false"
+              name="email"
+              id="emailFiledcreate"
+              placeholder="Enter new email"
+            />
+            <span class="emailerrorcreate" id="emailerrorcreate"></span>
+
+            <label for="password" class="labelpassword" id="labelpasscreate"
+              >Password</label
+            >
+            <iconify-icon
+              class="visibilityoffcreate"
+              id="visibility-create-off"
+              icon="material-symbols:visibility"
+      
+            >
+            </iconify-icon>
+
+            <iconify-icon
+              class="visibilitycreate"
+              id="visibility-create"
+              icon="material-symbols:visibility-off"
+            
+            ></iconify-icon>
+
+            
+            <input
+              type="password"
+              name="password"
+              id="passwordcreate"
+              placeholder="Enter new password"
+              maxlength="15"
+            />
+
+            <span class="passwordErrorCreate" id="passworderrorcreate"
+              >Enter password error</span
+            >
+          
+            <label
+              for="passwordconfirm"
+              class="labelconfirm"
+              id="toopasscreate"
+            ></label>
+            <input
+              type="password"
+              name="password"
+              id="passwordConfirmtoocreate"
+              placeholder="Confirm password"
+            />
+            <iconify-icon
+              class="visibilityoffconfirmcreate"
+              id="visibility-confirm-create-off"
+              icon="material-symbols:visibility"
+            >
+            </iconify-icon>
+
+            <iconify-icon
+              class="visibilityconfirmcreate"
+              id="visibilityconfirmcreate"
+              icon="material-symbols:visibility-off"
+            ></iconify-icon>
+            <span
+              class="email-error-confirm-create"
+              id="passworderrortoocreate"
+            >adsaadsasdfasdfsdfdsf</span>
+            <div class="login-btn-create">
+              <button class="btn-login-create" id="btncreate"></button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </section>
+    <script src="js/createanaccount.js"></script>
+     <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+</body>
+</html>
