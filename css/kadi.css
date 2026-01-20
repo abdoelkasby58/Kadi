@@ -272,6 +272,7 @@ body.noscroll {
   z-index: 1001;
 }
 .icon-menu img {
+  
   width: 45px;
   height: auto;
 }
@@ -1670,6 +1671,7 @@ html[lang="en"] .panel-title::before {
   width: 100%;
   height: 370px;
   border-top-left-radius: 150px;
+  text-align: center;
 }
 .footer-logo {
   width: 20%;
@@ -2386,6 +2388,7 @@ html[lang="en"] .panel-title::before {
   }
 
   .footer-sec {
+    text-align: center;
     /* background-color: rgba(224, 224, 224, 0.904); */
     width: 100%;
     display: flex;
@@ -2623,7 +2626,7 @@ html[lang="en"] .panel-title::before {
   }
   .kadi-home-content {
     width: 90%;
-    height: 435px;
+    height: 570px;
     margin: auto;
     margin: 86px 0px 0px 0px;
 
@@ -2697,6 +2700,21 @@ html[lang="en"] .panel-title::before {
   .hero-services {
     width: 355px;
     height: 60px;
+  }
+  .accordion-text-title {
+        font-size: 28px;
+        font-weight: 800;
+        opacity: 0;
+        line-height: 40px;
+        padding-inline: 10px;
+        text-align: center;
+    }
+  html[lang="en"] .hero-services {
+    display: flex;
+    position: relative;
+    width: 355px;
+    height: 70px;
+    margin-top: 10px;
   }
   .hero-boxes {
     display: grid;
@@ -2822,12 +2840,103 @@ html[lang="en"] .panel-title::before {
     font-weight: 800;
     position: absolute;
     top: -30px;
-    left: 44%;
+    left: 42%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     z-index: -1;
+  }
+  .kadi-boxes-all:nth-child(1) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(198, 145, 193, 0.6);
+    width: 300px;
+    height: 206px;
+    height: auto;
+    margin-top: 80px;
+    border-radius: 22px;
+    position: relative;
+  }
+  .kadi-boxes-all:nth-child(2) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(198, 145, 193, 0.6);
+    width: 300px;
+    height: 206px;
+    height: auto;
+    margin-top: 80px;
+    border-radius: 22px;
+    position: relative;
+  }
+  .kadi-boxes-all:nth-child(3) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(198, 145, 193, 0.6);
+    width: 300px;
+    height: 206px;
+    height: auto;
+    margin-top: 80px;
+    border-radius: 22px;
+    position: relative;
+  }
+  .kadi-boxes-text-titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 34px;
+    padding-inline: 40px;
+  }
+  .tab-center-up {
+    position: absolute;
+    bottom: 99px;
+    right: 70px;
+  }
+  .chart-box {
+    position: absolute;
+    top: 0;
+    right: 23px;
+  }
+  .tab-center-down {
+    position: absolute;
+    bottom: 0;
+    right: 24px;
+  }
+  .tab-two-right {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin-right: 10px;
+  }
+  .tab-two-right-phone {
+    position: relative;
+    width: 180px;
+    height: 350px;
+    background-color: var(--color-white);
+    border: 14px solid rgba(100, 62, 150, 1);
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+  }
+  .tab-two-right-kadi-salon {
+    position: absolute;
+    bottom: 21px;
+    width: 215px;
+    height: 225px;
+    direction: ltr;
+    background: var(--color-white, #fff);
+    border-radius: 12px;
+    padding: 14px;
+    font-family: sans-serif;
+    /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); */
+    opacity: 0;
   }
   .booking-card {
     width: 100%;
@@ -2931,6 +3040,13 @@ html[lang="en"] .panel-title::before {
     color: var(--color-white);
     cursor: pointer;
   }
+      .panel-title {
+        padding: 17px 32px;
+        position: relative;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 150%;
+    }
 }
 
 @media (max-width: 320px) {
@@ -3695,6 +3811,7 @@ html[lang="en"] .panel-title::before {
     align-items: center;
   }
   .footer-sec {
+    text-align: center;
     /* background-color: rgba(224, 224, 224, 0.904); */
     width: 100%;
     display: flex;
