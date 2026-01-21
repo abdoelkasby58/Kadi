@@ -60,7 +60,7 @@ const langKadi = {
     linkFAQ: "FAQ",
     responsiveSocialText: "Follow us on social media",
     btntextdownload: "Download App",
-    btnmenu: "Menu",
+
     menutext: "Menu",
     linkabout: "About",
     linkfeatures: "Features",
@@ -190,8 +190,8 @@ const langKadi = {
     linkFAQ: "الأسئلة الشائعة",
     responsiveSocialText: "تابعونا علي وسائل التواصل الأجتماعي",
     btntextdownload: "تحميل التطبيق",
-    btnmenu: "القائمة",
     menutext: "القائمة",
+    
     linkabout: "حول",
     linkfeatures: "الميزات",
     linkservices: "مزودي الخدمات",
