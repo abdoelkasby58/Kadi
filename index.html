@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html dir="rtl"  lang="ar">
+<!doctype html>
+<html dir="rtl" lang="ar">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kadi | كادي</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="src/fonts/Zain-LightItalic.ttf">
+    <link rel="stylesheet" href="src/fonts/Zain-LightItalic.ttf" />
   </head>
   <body>
-    
     <header class="nav-bar-login">
       <div class="header-left">
         <img src="src/imgs/Kadi-logo.png" alt="Kadi-logo" />
@@ -18,9 +17,7 @@
           ><iconify-icon
             icon="material-symbols:language"
             class="iconify-icon"
-           
           ></iconify-icon>
-         
         </label>
 
         <select class="lan" id="selectindex">
@@ -50,7 +47,9 @@
               id="emailFiled"
               placeholder="Enter new email"
             />
-            <span class="emailerror" id="emailerror"></span>
+            <span class="emailerror" id="emailerror"
+              >Please enter a valid email</span
+            >
 
             <label for="password" class="labelpassword" id="passwordindex"
               >Password</label
@@ -59,7 +58,6 @@
               class="visibilityoff"
               id="visibility-off"
               icon="material-symbols:visibility"
-      
             >
             </iconify-icon>
 
@@ -67,10 +65,8 @@
               class="visibility"
               id="visibility"
               icon="material-symbols:visibility-off"
-            
             ></iconify-icon>
 
-            
             <input
               type="password"
               name="password"
@@ -82,17 +78,16 @@
             <span class="passwordError" id="passworderror"
               >Enter password error</span
             >
-            <span class="passwordErrorchar" id="passwordcharacters"
-              >Enter password error</span
-            >
-            <a  id="linkforget">Forgot Password?</a>
+
+            <a id="linkforget">Forgot Password?</a>
             <div class="login-btn">
               <button class="btn-login" id="logout"></button>
             </div>
-           
+
             <div class="createaccount">
-              
-              <p id="createaccountp" class="pragraphcreate">?Don't have an account</p>
+              <p id="createaccountp" class="pragraphcreate">
+                ?Don't have an account
+              </p>
               <span class="link-create" id="createaccountlink"
                 >Create an account</span
               >

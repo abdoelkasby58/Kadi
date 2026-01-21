@@ -172,7 +172,7 @@ formEl.addEventListener("submit", function (event) {
   let savedEmail = localStorage.getItem("userEmail");
   let savedPassword = localStorage.getItem("userpassword");
 
-  if (!savedEmail || !savedPassword) {
+  if (emailValue === "" || emailValue !== savedEmail) {
     emailerror.style.display = "block";
 
     loginkadi = true;
@@ -182,9 +182,11 @@ formEl.addEventListener("submit", function (event) {
   }
 
   if (emailValue === savedEmail && passwordValue === savedPassword) {
+    passerror.style.display = "none";
+    emailerror.style.display = "none";
     localStorage.setItem("isLoggedIn", "true");
     window.location.href = "loading.html";
-    loginkadi = true;
+    loginkadi = false;
   }
   //else {
   //   // passerror.style.color = "red";

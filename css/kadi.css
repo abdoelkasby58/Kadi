@@ -272,7 +272,6 @@ body.noscroll {
   z-index: 1001;
 }
 .icon-menu img {
-  
   width: 45px;
   height: auto;
 }
@@ -1767,6 +1766,72 @@ html[lang="en"] .panel-title::before {
 }
 
 @media (max-width: 1024px) {
+  .scroll-up {
+    width: 45px;
+    height: 45px;
+    display: none;
+    border: 3px solid rgb(78 39 109);
+    background-color: var(--bg-scroll);
+    border-radius: 50%;
+    color: var(--color-white);
+    position: fixed;
+    bottom: 20px;
+    right: 720px;
+    transition: all 0.3s ease;
+    z-index: 100000;
+    text-decoration: none;
+  }
+
+  #theme-switch {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(57, 23, 85);
+    background-color: var(--bg-scroll);
+    border-radius: 50%;
+    color: var(--color-white);
+    position: fixed;
+    bottom: 20px;
+    right: 672px;
+    transition: all 0.3s ease;
+    z-index: 100000;
+    text-decoration: none;
+  }
+  html[lang="en"] .scroll-up {
+    width: 45px;
+    height: 45px;
+    display: none;
+    border: 3px solid rgb(78 39 109);
+    background-color: var(--bg-scroll);
+    border-radius: 50%;
+    color: var(--color-white);
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    transition: all 0.3s ease;
+    z-index: 100000;
+    text-decoration: none;
+  }
+  html[lang="en"] #theme-switch {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(57, 23, 85);
+    background-color: var(--bg-scroll);
+    border-radius: 50%;
+    color: var(--color-white);
+    position: fixed;
+    bottom: 25px;
+    right: 67px;
+    transition: all 0.3s ease;
+    z-index: 100000;
+    text-decoration: none;
+ 
+  }
   .responsive-navbar {
     width: 100%;
     height: 100vh;
@@ -2473,6 +2538,34 @@ html[lang="en"] .panel-title::before {
   }
 }
 @media (max-width: 600px) {
+  .language-select-kadi {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.language-icon {
+  width: 24px;
+  height: 24px;
+}
+.lan {
+  border-radius: 30px;
+  background-color: transparent;
+  border: 2px solid var(--text-color-);
+  overflow: auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 100%;
+  font-weight: 400;
+}
+.lan option {
+  background-color: var(--bg-body);
+  color: var(--text-color-);
+  border-radius: 30px;
+}
+.iconify-icon {
+  font-size: 23px;
+  background-color: transparent;
+}
   .responsive-navbar {
     width: 100%;
     height: 100vh;
@@ -2702,13 +2795,13 @@ html[lang="en"] .panel-title::before {
     height: 60px;
   }
   .accordion-text-title {
-        font-size: 28px;
-        font-weight: 800;
-        opacity: 0;
-        line-height: 40px;
-        padding-inline: 10px;
-        text-align: center;
-    }
+    font-size: 28px;
+    font-weight: 800;
+    opacity: 0;
+    line-height: 40px;
+    padding-inline: 10px;
+    text-align: center;
+  }
   html[lang="en"] .hero-services {
     display: flex;
     position: relative;
@@ -2989,8 +3082,25 @@ html[lang="en"] .panel-title::before {
     border-radius: 50%;
     color: var(--color-white);
     position: fixed;
-    bottom: 20px;
-    inset-inline-start: 50px;
+     right: 498px;
+    bottom: 25px;
+  ;
+    transition: all 0.3s ease;
+    z-index: 100000;
+    text-decoration: none;
+  }
+  html[lang="en"] .scroll-up {
+    width: 30px;
+    height: 30px;
+    display: none;
+    border: 3px solid rgb(78 39 109);
+    background-color: var(--bg-scroll);
+    border-radius: 50%;
+    color: var(--color-white);
+    position: fixed;
+    bottom: 25px;
+    right: 10px;
+    
     transition: all 0.3s ease;
     z-index: 100000;
     text-decoration: none;
@@ -3026,9 +3136,29 @@ html[lang="en"] .panel-title::before {
     border-radius: 50%;
     color: var(--color-white);
     position: fixed;
-    bottom: 20px;
+     right: 500px;
+    bottom: 25px;
     padding: 1px;
-    inset-inline-start: 100px;
+    inset-inline-start: 465px;
+    transition: all 0.3s ease;
+    z-index: 100000;
+    text-decoration: none;
+  }
+  html[lang="en"] #theme-switch {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(57, 23, 85);
+    background-color: var(--bg-scroll);
+    border-radius: 50%;
+    color: var(--color-white);
+    position: fixed;
+    left: 262px;
+    bottom: 25px;
+    padding: 1px;
+   
     transition: all 0.3s ease;
     z-index: 100000;
     text-decoration: none;
@@ -3040,13 +3170,13 @@ html[lang="en"] .panel-title::before {
     color: var(--color-white);
     cursor: pointer;
   }
-      .panel-title {
-        padding: 17px 32px;
-        position: relative;
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 150%;
-    }
+  .panel-title {
+    padding: 17px 32px;
+    position: relative;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 150%;
+  }
 }
 
 @media (max-width: 320px) {
@@ -3152,13 +3282,13 @@ html[lang="en"] .panel-title::before {
     color: rgba(55, 65, 81, 1);
     cursor: pointer;
   }
-  .box-social {
-    display: block;
-    width: 100%;
-    height: 82px;
-    position: absolute;
-    top: 630px;
-  }
+ .box-social {
+        display: block;
+        width: 100%;
+        height: 82px;
+        position: absolute;
+        top: 564px;
+    }
   .box-social-too {
     display: grid;
     gap: 20px;
@@ -3903,6 +4033,96 @@ html[lang="en"] .panel-title::before {
   .contact-address {
     font-size: 11px;
     font-weight: 700;
+  }
+   .scroll-up {
+    width: 30px;
+    height: 30px;
+    display: none;
+    border: 3px solid rgb(78 39 109);
+    background-color: var(--bg-scroll);
+    border-radius: 50%;
+    color: var(--color-white);
+    position: fixed;
+     right: 498px;
+    bottom: 25px;
+  ;
+    transition: all 0.3s ease;
+    z-index: 100000;
+    text-decoration: none;
+  }
+  html[lang="en"] .scroll-up {
+    width: 30px;
+    height: 30px;
+    display: none;
+    border: 3px solid rgb(78 39 109);
+    background-color: var(--bg-scroll);
+    border-radius: 50%;
+    color: var(--color-white);
+    position: fixed;
+    bottom: 25px;
+    right: 10px;
+    
+    transition: all 0.3s ease;
+    z-index: 100000;
+    text-decoration: none;
+  }
+  .scroll-up:hover {
+    border: 3px solid rgb(37, 10, 59);
+    background-color: var(--bg-scroll-hover);
+    border-radius: 50%;
+    color: var(--color-white);
+    cursor: pointer;
+  }
+  .arrowup {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 17px;
+    padding: 1px;
+  }
+  .arrow-icon {
+    width: 30px;
+    height: 30px;
+    color: black;
+  }
+  #theme-switch {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(57, 23, 85);
+    background-color: var(--bg-scroll);
+    border-radius: 50%;
+    color: var(--color-white);
+    position: fixed;
+     right: 500px;
+    bottom: 25px;
+    padding: 1px;
+    inset-inline-start: 465px;
+    transition: all 0.3s ease;
+    z-index: 100000;
+    text-decoration: none;
+  }
+  html[lang="en"] #theme-switch {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(57, 23, 85);
+    background-color: var(--bg-scroll);
+    border-radius: 50%;
+    color: var(--color-white);
+    position: fixed;
+   left: 230px;
+    bottom: 25px;
+    padding: 1px;
+   
+    transition: all 0.3s ease;
+    z-index: 100000;
+    text-decoration: none;
   }
 }
 html {
