@@ -749,26 +749,30 @@ html[lang="en"] .hero-services {
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  opacity: 0;
+  /* opacity: 0; */
   margin-top: 20px;
   position: relative;
+  visibility: hidden;
 }
 .kadi-boxes--all-one:nth-child(2) {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  /* opacity: 0; */
   margin-top: 200px;
   position: relative;
+  visibility: hidden;
 }
 .kadi-boxes--all-one:nth-child(3) {
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  opacity: 0;
+  /* opacity: 0; */
   margin-top: 80px;
   position: relative;
+  visibility: hidden;
 }
+
 .before-kadi,
 .before-kadi-two,
 .before-kadi-one {
@@ -806,9 +810,9 @@ html[lang="en"] .hero-services {
     rgba(100, 62, 152, 0.1)
   );
 
-  -webkit-backdrop-filter: blur(13px);
-
   backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  will-change: backdrop-filter;
 
   border: 1px solid rgba(198, 145, 193, 0.6);
 
@@ -824,24 +828,25 @@ html[lang="en"] .hero-services {
 }
 
 .kadi-boxes--all-one:nth-child(1).animate {
-  animation: kadiboxes 0.5s 0.9s ease forwards;
+  animation: kadiboxallone 0.5s 0.9s ease forwards;
 }
 .kadi-boxes--all-one:nth-child(2).animate {
-  animation: kadiboxes 0.5s 1.2s ease forwards;
+  animation: kadiboxallone 0.5s 1.2s ease forwards;
 }
 .kadi-boxes--all-one:nth-child(3).animate {
-  animation: kadiboxes 0.5s 1.5s ease forwards;
+  animation: kadiboxallone 0.5s 1.5s ease forwards;
 }
-@keyframes kadiboxes {
+@keyframes kadiboxallone {
   from {
-    opacity: 0;
+    visibility: hidden;
     transform: translateY(0);
   }
   to {
-    opacity: 1;
+    visibility: visible;
     transform: translateY(30px);
   }
 }
+
 .kadi-boxes {
   width: 100%;
   height: auto;
@@ -853,9 +858,9 @@ html[lang="en"] .hero-services {
     rgba(198, 145, 193, 0.1),
     rgba(100, 62, 152, 0.1)
   );
-  -webkit-backdrop-filter: blur(13px);
-
   backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  will-change: backdrop-filter;
   border: 1px solid rgba(198, 145, 193, 0.6);
   width: 319.8480224609375px;
   height: 269.4735412597656px;
@@ -882,9 +887,9 @@ html[lang="en"] .hero-services {
     rgba(198, 145, 193, 0.1),
     rgba(100, 62, 152, 0.1)
   );
-  -webkit-backdrop-filter: blur(13px);
-
   backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  will-change: backdrop-filter;
   border: 1px solid rgba(198, 145, 193, 0.6);
   width: 319.8480224609375px;
   height: 276.9211730957031px;
@@ -2902,7 +2907,7 @@ html[lang="en"] .panel-title::before {
     display: grid;
     justify-content: center;
   }
- .kadi-boxes--all-one:nth-child(1) {
+  .kadi-boxes--all-one:nth-child(1) {
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -3517,7 +3522,7 @@ html[lang="en"] .panel-title::before {
     display: grid;
     justify-content: center;
   }
- .kadi-boxes--all-one:nth-child(1) {
+  .kadi-boxes--all-one:nth-child(1) {
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -3544,7 +3549,6 @@ html[lang="en"] .panel-title::before {
   .kadi-boxes-all:nth-child(3) .before-kadi-two {
     width: 50px;
     height: 50px;
-   
   }
   html[lang="en"] .before-kadi,
   .kadi-boxes-all:nth-child(2) .before-kadi-one,
