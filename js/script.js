@@ -172,7 +172,7 @@ formEl.addEventListener("submit", function (event) {
   let savedEmail = localStorage.getItem("userEmail");
   let savedPassword = localStorage.getItem("userpassword");
 
-  if (emailValue === "" || emailValue !== savedEmail) {
+  if (emailValue === "") {
     emailerror.style.display = "block";
 
     loginkadi = true;

@@ -71,7 +71,7 @@ h1.animate {
   border-radius: 50%;
   color: var(--color-white);
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   right: 50px;
   transition: all 0.3s ease;
   z-index: 100000;
@@ -107,7 +107,7 @@ h1.animate {
   border-radius: 50%;
   color: var(--color-white);
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   right: 100px;
   transition: all 0.3s ease;
   z-index: 100000;
@@ -380,7 +380,7 @@ p.animate {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   transition: all 0.3s ease-in;
 }
 .kadi-home {
@@ -2183,15 +2183,8 @@ html[lang="en"] .panel-title::before {
   }
 
   .kadi-boxes-all:nth-child(1) {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-
-    position: relative;
     width: 430.3079528808594px;
     height: auto;
-    border-radius: 22px;
-    /* margin-top: 80px; */
-    opacity: 0;
   }
   .kadi-boxes-all:nth-child(2) {
     -webkit-backdrop-filter: blur(10px);
@@ -2932,7 +2925,7 @@ html[lang="en"] .panel-title::before {
     text-align: center;
   }
   .kadi-home-two__title {
-    color: rgba(60, 63, 79, 1);
+    /* color: rgba(60, 63, 79, 1); */
     font-size: 28px;
     font-weight: 800;
     line-height: 140%;
@@ -2973,15 +2966,8 @@ html[lang="en"] .panel-title::before {
     z-index: -1;
   }
   .kadi-boxes-all:nth-child(1) {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(198, 145, 193, 0.6);
     width: 300px;
     height: 206px;
-    height: auto;
-    margin-top: 80px;
-    border-radius: 22px;
-    position: relative;
   }
   .kadi-boxes-all:nth-child(2) {
     -webkit-backdrop-filter: blur(10px);
@@ -3596,15 +3582,8 @@ html[lang="en"] .panel-title::before {
     font-size: 25px;
   }
   .kadi-boxes-all:nth-child(1) {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-
-    position: relative;
     width: 95%;
     height: auto;
-    border-radius: 22px;
-    margin: 50px auto;
-    opacity: 0;
   }
   .kadi-boxes-all:nth-child(2) {
     -webkit-backdrop-filter: blur(10px);

@@ -37,11 +37,11 @@ langselectorcreate.addEventListener("change", Updatecreate);
 
 document.addEventListener("DOMContentLoaded", () => {
   langselectorcreate.addEventListener("change", () => {
-    localStorage.setItem("lang-create", langselectorcreate.value);
+    localStorage.setItem("lang", langselectorcreate.value);
     Updatecreate();
     hideLangcreate();
   });
-  let storedLangCreate = localStorage.getItem("lang-create") || "en";
+  let storedLangCreate = localStorage.getItem("lang") || "en";
   langselectorcreate.value = storedLangCreate;
   Updatecreate();
   hideLangcreate();

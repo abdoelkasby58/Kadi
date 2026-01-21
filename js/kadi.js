@@ -515,6 +515,21 @@ document.getElementById("bookingBtn").addEventListener("click", function () {
     .scrollIntoView({ behavior: "smooth" });
 });
 
+document.getElementById("invoiceBtn").addEventListener("click", function () {
+  document
+    .getElementById("container-kadi")
+    .scrollIntoView({ behavior: "smooth" });
+});
+document.getElementById("reportsBtn").addEventListener("click", function () {
+  document
+    .getElementById("container-kadi")
+    .scrollIntoView({ behavior: "smooth" });
+});
+document.getElementById("btn-install-app").addEventListener("click", function () {
+  document
+    .getElementById("tabReportsText")
+    .scrollIntoView({ behavior: "smooth" });
+});
 // // اللغة الحالية (تقدر تغيّرها ديناميكي حسب موقعك)
 // let currentLang = 'ar';
 
