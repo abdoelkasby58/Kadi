@@ -102,7 +102,7 @@ const emailRegex =
   /^(?!.*\.\.)(?!.*\.$)(?!^\.)[a-zA-Z0-9]+([._-]?[a-zA-Z0-9]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z]{2,})+$/;
 
 const allowedDomains = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com"];
-const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,15}$/;
+const passwordRegex = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
 
 let linkforgetlink = document.getElementById(`linkforget`);
 linkforgetlink.addEventListener(`click`, () => {
@@ -186,7 +186,7 @@ formEl.addEventListener("submit", function (event) {
     emailerror.style.display = "none";
     localStorage.setItem("isLoggedIn", "true");
     window.location.href = "loading.html";
-    loginkadi = false;
+    // loginkadi = false;
   }
   //else {
   //   // passerror.style.color = "red";

@@ -13,6 +13,7 @@ body {
     color 0.3s ease;
 }
 :root {
+  --bg-header: rgba(255, 255, 255, 90%);
   --bg-body: rgba(255, 255, 255, 0.4);
   --text-color-: rgba(55, 65, 81, 1);
   --text-color-small: rgba(107, 114, 128, 1);
@@ -37,6 +38,7 @@ h1.animate {
   animation: Honetext 0.7s 0.3s ease-in forwards;
 }
 .darkmode {
+  --bg-header: rgba(17, 25, 44, 0.96);
   --color-box-small: rgb(255, 255, 255);
   --tab-hover: rgba(29, 39, 56, 0.753);
   --bg-body: rgba(17, 25, 44, 0.96);
@@ -105,10 +107,8 @@ h1.animate {
   border: 3px solid rgb(57, 23, 85);
   background-color: var(--bg-scroll);
   border-radius: 50%;
-  color: var(--color-white);
-  position: fixed;
-  bottom: 30px;
-  right: 100px;
+  color: var(--text-color-);
+
   transition: all 0.3s ease;
   z-index: 100000;
   text-decoration: none;
@@ -128,6 +128,7 @@ h1.animate {
 }
 .darkmode #theme-switch svg:last-child {
   display: block;
+  color: var(--text-color-);
 }
 .language-select-kadi {
   display: flex;
@@ -154,7 +155,7 @@ h1.animate {
   border-radius: 30px;
 }
 .iconify-icon {
-  font-size: 24px;
+  font-size: 26px;
   background-color: transparent;
 }
 html[lang="en"] {
@@ -199,7 +200,7 @@ body.noscroll {
   margin: auto;
 }
 .header {
-  background-color: var(--bg-body);
+  background-color: var(--bg-header);
   width: 88%;
   height: 100px;
   display: flex;
@@ -211,11 +212,23 @@ body.noscroll {
   box-shadow: 0px 9px 100px -20px rgba(0, 0, 0, 0.19);
   border-radius: 47.98px;
   margin-top: 30px;
-  opacity: 0;
+  opacity: 1;
   transition: all 0.4s ease;
+
+  position: sticky;
+  top: 20px; /* المسافة من أعلى الصفحة */
+  z-index: 999;
 }
+
 .header.animate {
   animation: headertext 0.7s ease-in forwards;
+}
+.navbar-btns {
+  width: 39%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
 }
 .download-btn {
   width: 185px;
@@ -985,6 +998,7 @@ html[lang="en"] .hero-services {
   width: 90%;
   margin: auto;
   padding: 100px 76px 100px 76px;
+  border-top-left-radius: 150px;
 }
 .kadi-Administration-title {
   display: flex;
@@ -1672,7 +1686,7 @@ html[lang="en"] .panel-title::before {
   justify-content: space-between;
   width: 100%;
   height: 330px;
-  border-top-left-radius: 150px;
+
   text-align: center;
 }
 .footer-logo {
@@ -1769,25 +1783,12 @@ html[lang="en"] .panel-title::before {
 }
 
 @media (max-width: 1024px) {
-  .scroll-up {
-    width: 45px;
-    height: 45px;
-    display: none;
-    border: 3px solid rgb(78 39 109);
-    background-color: var(--bg-scroll);
-    border-radius: 50%;
-    color: var(--color-white);
-    position: fixed;
-    bottom: 20px;
-    right: 720px;
-    transition: all 0.3s ease;
-    z-index: 100000;
-    text-decoration: none;
-  }
-
+ .scroll-up{
+  display: none;
+ }
   #theme-switch {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1795,9 +1796,7 @@ html[lang="en"] .panel-title::before {
     background-color: var(--bg-scroll);
     border-radius: 50%;
     color: var(--color-white);
-    position: fixed;
-    bottom: 20px;
-    right: 672px;
+
     transition: all 0.3s ease;
     z-index: 100000;
     text-decoration: none;
@@ -1827,9 +1826,7 @@ html[lang="en"] .panel-title::before {
     background-color: var(--bg-scroll);
     border-radius: 50%;
     color: var(--color-white);
-    position: fixed;
-    bottom: 25px;
-    right: 67px;
+
     transition: all 0.3s ease;
     z-index: 100000;
     text-decoration: none;
@@ -1972,6 +1969,13 @@ html[lang="en"] .panel-title::before {
     border: none;
     background-color: transparent;
     /* background-color: #5b0fe7; */
+  }
+  .navbar-btns {
+    width: 41%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
   }
   .kadi-home-dark-mode {
     background-color: var(--bg-body);
@@ -2134,21 +2138,21 @@ html[lang="en"] .panel-title::before {
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    opacity: 0;
+    /* opacity: 0; */
     margin-top: 60px;
   }
   .kadi-boxes--all-one:nth-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    /* opacity: 0; */
     margin-top: 110px;
   }
   .kadi-boxes--all-one:nth-child(3) {
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    opacity: 0;
+    /* opacity: 0; */
     margin-top: 110px;
     margin-bottom: 30px;
   }
@@ -2214,7 +2218,7 @@ html[lang="en"] .panel-title::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 1px;
+   padding: 5px 100px;
     gap: 20px;
   }
   .kadi-Administration-title__text {
@@ -2540,13 +2544,14 @@ html[lang="en"] .panel-title::before {
   .language-select-kadi {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0px;
   }
   .language-icon {
-    width: 24px;
-    height: 24px;
+    width: 21px;
+    height: 20px;
   }
   .lan {
+    width: 40px;
     border-radius: 30px;
     background-color: transparent;
     border: 2px solid var(--text-color-);
@@ -2562,7 +2567,7 @@ html[lang="en"] .panel-title::before {
     border-radius: 30px;
   }
   .iconify-icon {
-    font-size: 23px;
+    font-size: 20px;
     background-color: transparent;
   }
   .responsive-navbar {
@@ -2635,7 +2640,11 @@ html[lang="en"] .panel-title::before {
   .menu {
     display: flex;
   }
-
+  .icon-menu {
+    width: 22px;
+    height: 27px;
+    z-index: 1001;
+  }
   .container-menu p {
     margin: 20px;
     font-size: 25px;
@@ -2682,7 +2691,14 @@ html[lang="en"] .panel-title::before {
     outline: none;
     border: none;
     background-color: transparent;
-    /* background-color: #5b0fe7; */
+  }
+  .navbar-btns {
+    width: 64%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    margin-inline: 5px;
   }
   .kadi-home-dark-mode {
     background-color: var(--bg-body);
@@ -2911,21 +2927,21 @@ html[lang="en"] .panel-title::before {
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    opacity: 0;
+    /* opacity: 0; */
     margin-top: 60px;
   }
   .kadi-boxes--all-one:nth-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    /* opacity: 0; */
     margin-top: 110px;
   }
   .kadi-boxes--all-one:nth-child(3) {
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    opacity: 0;
+    /* opacity: 0; */
     margin-top: 110px;
     margin-bottom: 30px;
   }
@@ -3015,6 +3031,32 @@ html[lang="en"] .panel-title::before {
     /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); */
     opacity: 0;
   }
+   .kadi-Administration {
+    border-radius: 40px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding: 20px;
+  }
+  .kadi-Administration-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   padding: 5px 1px;
+    gap: 20px;
+  }
+  .kadi-Administration-title__text {
+    font-size: 28px;
+    font-weight: 800;
+
+    text-align: center;
+  }
+  .kadi-Administration-title__desc {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+  }
   .booking-card {
     width: 100%;
     max-width: 300px;
@@ -3057,52 +3099,15 @@ html[lang="en"] .panel-title::before {
     top: -20px;
     left: 2px;
   }
-  .scroll-up {
-    width: 30px;
-    height: 30px;
-    display: none;
-    border: 3px solid rgb(78 39 109);
-    background-color: var(--bg-scroll);
-    border-radius: 50%;
-    color: var(--color-white);
-    position: fixed;
-    right: 498px;
-    bottom: 25px;
-    transition: all 0.3s ease;
-    z-index: 100000;
-    text-decoration: none;
+  
+  .menu-text {
+    font-size: 12px;
   }
-  html[lang="en"] .scroll-up {
-    width: 30px;
-    height: 30px;
-    display: none;
-    border: 3px solid rgb(78 39 109);
-    background-color: var(--bg-scroll);
-    border-radius: 50%;
-    color: var(--color-white);
-    position: fixed;
-    bottom: 25px;
-    right: 10px;
-
-    transition: all 0.3s ease;
-    z-index: 100000;
-    text-decoration: none;
+  .icon-menu img {
+    width: 28px;
+    height: 20px;
   }
-  .scroll-up:hover {
-    border: 3px solid rgb(37, 10, 59);
-    background-color: var(--bg-scroll-hover);
-    border-radius: 50%;
-    color: var(--color-white);
-    cursor: pointer;
-  }
-  .arrowup {
-    display: grid;
-    justify-items: center;
-    justify-content: center;
-    font-weight: 900;
-    font-size: 17px;
-    padding: 1px;
-  }
+ 
   .arrow-icon {
     width: 30px;
     height: 30px;
@@ -3118,9 +3123,7 @@ html[lang="en"] .panel-title::before {
     background-color: var(--bg-scroll);
     border-radius: 50%;
     color: var(--color-white);
-    position: fixed;
-    right: 500px;
-    bottom: 25px;
+
     padding: 1px;
     inset-inline-start: 465px;
     transition: all 0.3s ease;
@@ -3137,9 +3140,7 @@ html[lang="en"] .panel-title::before {
     background-color: var(--bg-scroll);
     border-radius: 50%;
     color: var(--color-white);
-    position: fixed;
-    left: 262px;
-    bottom: 25px;
+
     padding: 1px;
 
     transition: all 0.3s ease;
@@ -3295,6 +3296,13 @@ html[lang="en"] .panel-title::before {
     border: none;
     background-color: transparent;
     /* background-color: #5b0fe7; */
+  }
+  .navbar-btns {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
   }
   .kadi-home-dark-mode {
     background-color: var(--bg-body);
@@ -3526,21 +3534,21 @@ html[lang="en"] .panel-title::before {
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    opacity: 0;
+    /* opacity: 0; */
     margin-top: 60px;
   }
   .kadi-boxes--all-one:nth-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    /* opacity: 0; */
     margin-top: 110px;
   }
   .kadi-boxes--all-one:nth-child(3) {
     display: flex;
     justify-content: center;
     /* align-items: center; */
-    opacity: 0;
+    /* opacity: 0; */
     margin-top: 110px;
     margin-bottom: 30px;
   }
@@ -3998,44 +4006,7 @@ html[lang="en"] .panel-title::before {
     font-size: 11px;
     font-weight: 700;
   }
-  .scroll-up {
-    width: 30px;
-    height: 30px;
-    display: none;
-    border: 3px solid rgb(78 39 109);
-    background-color: var(--bg-scroll);
-    border-radius: 50%;
-    color: var(--color-white);
-    position: fixed;
-    right: 498px;
-    bottom: 25px;
-    transition: all 0.3s ease;
-    z-index: 100000;
-    text-decoration: none;
-  }
-  html[lang="en"] .scroll-up {
-    width: 30px;
-    height: 30px;
-    display: none;
-    border: 3px solid rgb(78 39 109);
-    background-color: var(--bg-scroll);
-    border-radius: 50%;
-    color: var(--color-white);
-    position: fixed;
-    bottom: 25px;
-    right: 10px;
-
-    transition: all 0.3s ease;
-    z-index: 100000;
-    text-decoration: none;
-  }
-  .scroll-up:hover {
-    border: 3px solid rgb(37, 10, 59);
-    background-color: var(--bg-scroll-hover);
-    border-radius: 50%;
-    color: var(--color-white);
-    cursor: pointer;
-  }
+ 
   .arrowup {
     display: grid;
     justify-items: center;
@@ -4059,9 +4030,7 @@ html[lang="en"] .panel-title::before {
     background-color: var(--bg-scroll);
     border-radius: 50%;
     color: var(--color-white);
-    position: fixed;
-    right: 500px;
-    bottom: 25px;
+
     padding: 1px;
     inset-inline-start: 465px;
     transition: all 0.3s ease;
@@ -4078,9 +4047,7 @@ html[lang="en"] .panel-title::before {
     background-color: var(--bg-scroll);
     border-radius: 50%;
     color: var(--color-white);
-    position: fixed;
-    left: 230px;
-    bottom: 25px;
+
     padding: 1px;
 
     transition: all 0.3s ease;

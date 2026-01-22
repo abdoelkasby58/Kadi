@@ -145,17 +145,20 @@ FormConfirm.addEventListener(`submit`, function (event) {
   if (errorConfirm) return;
   let email = localStorage.getItem("tempEmail");
 
-  if (!email) {
-    emailError.style.display = "block";
+  let savedEmail = localStorage.getItem("userEmail");
+
+  if (!email || email !== savedEmail) {
+    alert("جلسة غير صالحة. حاول مرة أخرى.");
     window.location.href = "forgetemail.html";
     return;
   }
-  localStorage.setItem("userEmail", email);
+
+  // فقط هنا نغير الباسورد
   localStorage.setItem("userpassword", Valuepasstoo);
   localStorage.setItem("isLoggedIn", "false");
   localStorage.removeItem("tempEmail");
 
-  alert("تم تحديث الباسورد بنجاح");
-
+  alert("تم تحديث كلمة المرور بنجاح");
   window.location.href = "index.html";
+
 });

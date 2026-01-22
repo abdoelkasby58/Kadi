@@ -104,7 +104,17 @@ Loginform.addEventListener("submit", function (e) {
   }
   if (Stop) return;
 
-  localStorage.setItem("tempEmail", EmailForgetValue);
+  let savedEmail = localStorage.getItem("userEmail");
 
-  window.location.href = "confirmpassword.html";
+
+if (!savedEmail || savedEmail !== EmailForgetValue) {
+  emailError.style.display = "block";
+  alert("هذا البريد غير مسجل. الرجاء إنشاء حساب أولاً.");
+  return; 
+}
+
+
+localStorage.setItem("tempEmail", EmailForgetValue);
+window.location.href = "confirmpassword.html";
+
 });
