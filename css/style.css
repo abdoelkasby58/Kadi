@@ -34,9 +34,11 @@ html[lang="en"] {
   width: 110.823517px;
   height: 55px;
 }
+
 .language-icon {
-  width: 24px;
-  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .header-right .lan {
   border: none;

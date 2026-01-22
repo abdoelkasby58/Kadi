@@ -342,24 +342,6 @@ function updateKadiLang() {
 }
 updateKadiLang();
 
-// scroll up
-let up = document.getElementById(`up`);
-
-window.onscroll = function () {
-  if (scrollY >= 400) {
-    up.style.display = `block`;
-  } else {
-    up.style.display = `none`;
-  }
-};
-up.onclick = function () {
-  scroll({
-    left: 0,
-    top: 0,
-    behavior: "smooth",
-  });
-};
-
 let tabs = document.querySelector(".tabs");
 let tabButtons = tabs.querySelectorAll(".tab");
 

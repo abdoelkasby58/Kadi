@@ -64,61 +64,33 @@ h1.animate {
   --text-btn-tab-hover: rgba(226, 232, 240, 1);
   --bg-tab-btn-hover: rgba(51, 65, 85, 1);
 }
-.scroll-up {
-  width: 45px;
-  height: 45px;
-  display: none;
-  border: 3px solid rgb(78 39 109);
-  background-color: var(--bg-scroll);
-  border-radius: 50%;
-  color: var(--color-white);
-  position: fixed;
-  bottom: 30px;
-  right: 50px;
-  transition: all 0.3s ease;
-  z-index: 100000;
-  text-decoration: none;
-}
-.scroll-up:hover {
-  border: 3px solid rgb(37, 10, 59);
-  background-color: var(--bg-scroll-hover);
-  border-radius: 50%;
-  color: var(--color-white);
-  cursor: pointer;
-}
-.arrowup {
-  display: grid;
-  justify-items: center;
-  justify-content: center;
-  font-size: 25px;
-  padding: 4px;
-}
-.arrow-icon {
-  width: 30px;
-  height: 35px;
-  color: black;
-}
-#theme-switch {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid rgb(57, 23, 85);
-  background-color: var(--bg-scroll);
-  border-radius: 50%;
-  color: var(--text-color-);
 
-  transition: all 0.3s ease;
-  z-index: 100000;
-  text-decoration: none;
+#theme-switch {
+ display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background:var(--btn-color);
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(111, 79, 197, 0.35);
+    transition: all 0.3s ease;
+    padding-inline: 12px;
+    margin-inline: 0px;
 }
 #theme-switch:hover {
-  border: 3px solid rgb(37, 10, 59);
-  background-color: var(--bg-scroll-hover);
-  border-radius: 50%;
-  color: var(--color-white);
-  cursor: pointer;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(111, 79, 197, 0.45);
+}
+#theme-switch svg {
+  width: 22px;
+  height: 22px;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 #theme-switch svg:last-child {
   display: none;
@@ -133,31 +105,48 @@ h1.animate {
 .language-select-kadi {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+}
+.language-select-kadi:hover {
+  border-color: #593b9b;
 }
 .language-icon {
-  width: 24px;
-  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .lan {
-  border-radius: 30px;
-  background-color: transparent;
-  border: 2px solid var(--text-color-);
-  overflow: auto;
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  line-height: 100%;
-  font-weight: 400;
+  background: transparent;
+  border: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  padding: 2px 6px;
 }
 .lan option {
   background-color: var(--bg-body);
   color: var(--text-color-);
-  border-radius: 30px;
 }
-.iconify-icon {
-  font-size: 26px;
-  background-color: transparent;
+.language-select-kadi::after {
+  content: "▾";
+  font-size: 11px;
+  color: #6d4bb5;
+  margin-inline-start: 4px;
 }
+
+.language-icon .iconify-icon {
+  font-size: 18px;
+  color: #6d4bb5;
+}
+
 html[lang="en"] {
   direction: ltr;
 }
@@ -201,10 +190,10 @@ body.noscroll {
 }
 .header {
   background-color: var(--bg-header);
-  width: 88%;
+  width: 90%;
   height: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row-reverse;
   padding: 20px 30px 20px 30px;
@@ -214,21 +203,24 @@ body.noscroll {
   margin-top: 30px;
   opacity: 1;
   transition: all 0.4s ease;
-
   position: sticky;
-  top: 20px; /* المسافة من أعلى الصفحة */
+  top: 20px;
   z-index: 999;
+  gap: 2px;
 }
 
 .header.animate {
   animation: headertext 0.7s ease-in forwards;
 }
 .navbar-btns {
-  width: 39%;
+  width: 38%;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+}
+.header-right-kadi {
+  direction: rtl;
 }
 .download-btn {
   width: 185px;
@@ -255,7 +247,9 @@ body.noscroll {
 .download-btn:hover {
   background: rgb(85, 48, 133);
 }
-
+.icons-apple {
+  padding-left: 10px;
+}
 .icons {
   width: 43px;
   height: 18px;
@@ -265,7 +259,16 @@ body.noscroll {
   border-left: rgba(229, 231, 235, 1) 1px solid;
   padding: 8px 0px;
 }
-
+.apple-logo {
+  padding-right: 6px;
+  object-fit: contain;
+}
+.google-play-logo {
+  /* object-fit: contain; */
+  color: var(--color-white);
+  padding-left: 8px;
+  border-left: rgba(229, 231, 235, 1) solid 1px;
+}
 .icons img {
   width: 15px;
   height: auto;
@@ -290,7 +293,7 @@ body.noscroll {
   z-index: 1111;
 }
 .header-center {
-  width: 371.9620056152344px;
+  width: 46%;
   height: 41.990501403808594px;
   display: flex;
   align-items: center;
@@ -309,6 +312,7 @@ body.noscroll {
 }
 
 .header-left {
+  width: 16%;
   height: 80px;
   display: flex;
   align-items: flex-end;
@@ -378,9 +382,6 @@ p.animate {
     /* transform: translate(200px); */
     opacity: 1;
   }
-}
-.header-right-kadi {
-  direction: rtl;
 }
 
 /* kadi-home */
@@ -488,12 +489,7 @@ html[lang="en"] .kadi-home-content h1 {
   width: 30px;
   height: 22px;
 }
-.google-play-logo {
-  /* object-fit: contain; */
-  color: var(--color-white);
-  padding-left: 8px;
-  border-left: rgba(229, 231, 235, 1) solid 1px;
-}
+
 .google-play-logo-aaa {
   width: 30px;
   height: 22px;
@@ -514,15 +510,10 @@ html[lang="en"] .kadi-home-content h1 {
   align-items: center;
   padding-left: 7px;
 }
-.apple-logo {
-  padding-right: 6px;
-  object-fit: contain;
-}
+
 .icons-google {
 }
-.icons-apple {
-  padding-left: 10px;
-}
+
 .google-play-logo {
 }
 .btn-text {
@@ -1783,54 +1774,34 @@ html[lang="en"] .panel-title::before {
 }
 
 @media (max-width: 1024px) {
- .scroll-up{
-  display: none;
- }
+  .header {
+    height: 60px;
+  }
   #theme-switch {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid rgb(57, 23, 85);
-    background-color: var(--bg-scroll);
-    border-radius: 50%;
-    color: var(--color-white);
-
-    transition: all 0.3s ease;
-    z-index: 100000;
-    text-decoration: none;
+    width: 42px;
+    height: 42px;
+    padding-inline: 11px;
+    margin-inline: 19px;
   }
-  html[lang="en"] .scroll-up {
-    width: 45px;
-    height: 45px;
+
+  #theme-switch svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .language-select-kadi {
+    padding: 5px 12px;
+    gap: 8px;
+    font-size: 13px;
+  }
+
+  .language-icon .iconify-icon {
+    font-size: 18px;
+  }
+  .scroll-up {
     display: none;
-    border: 3px solid rgb(78 39 109);
-    background-color: var(--bg-scroll);
-    border-radius: 50%;
-    color: var(--color-white);
-    position: fixed;
-    bottom: 25px;
-    right: 20px;
-    transition: all 0.3s ease;
-    z-index: 100000;
-    text-decoration: none;
   }
-  html[lang="en"] #theme-switch {
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid rgb(57, 23, 85);
-    background-color: var(--bg-scroll);
-    border-radius: 50%;
-    color: var(--color-white);
 
-    transition: all 0.3s ease;
-    z-index: 100000;
-    text-decoration: none;
-  }
   .responsive-navbar {
     width: 100%;
     height: 100vh;
@@ -1854,14 +1825,7 @@ html[lang="en"] .panel-title::before {
   .header-right-kadi {
     display: none;
   }
-  .header {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    margin-top: 40px;
-  }
+
   .icon-menu {
     width: 40px;
     height: 27px;
@@ -1971,7 +1935,7 @@ html[lang="en"] .panel-title::before {
     /* background-color: #5b0fe7; */
   }
   .navbar-btns {
-    width: 41%;
+    width: 60%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -2218,7 +2182,7 @@ html[lang="en"] .panel-title::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   padding: 5px 100px;
+    padding: 5px 100px;
     gap: 20px;
   }
   .kadi-Administration-title__text {
@@ -2541,34 +2505,40 @@ html[lang="en"] .panel-title::before {
   }
 }
 @media (max-width: 600px) {
+  .header{
+    gap:24px
+    ;
+  }
+  #theme-switch {
+    width: 30px;
+    height: 30px;
+    padding-inline: 5px;
+    margin-inline: 9px;
+  }
+
+  #theme-switch svg {
+    width: 16px;
+    height: 16px;
+  }
+
   .language-select-kadi {
-    display: flex;
-    align-items: center;
+    padding: 4px 0px;
     gap: 0px;
+    font-size: 12px;
   }
-  .language-icon {
-    width: 21px;
-    height: 20px;
+
+  .language-icon .iconify-icon {
+    font-size: 16px;
   }
+
   .lan {
-    width: 40px;
-    border-radius: 30px;
-    background-color: transparent;
-    border: 2px solid var(--text-color-);
-    overflow: auto;
-    font-family: "Poppins", sans-serif;
-    font-size: 13px;
-    line-height: 100%;
-    font-weight: 400;
+    font-size: 12px;
+    padding-right: 14px;
   }
-  .lan option {
-    background-color: var(--bg-body);
-    color: var(--text-color-);
-    border-radius: 30px;
-  }
-  .iconify-icon {
-    font-size: 20px;
-    background-color: transparent;
+
+  .language-select-kadi::after {
+    font-size: 10px;
+    margin-inline-start: 4px;
   }
   .responsive-navbar {
   }
@@ -2585,14 +2555,6 @@ html[lang="en"] .panel-title::before {
   }
   .header-right-kadi {
     display: none;
-  }
-  .header {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    margin-top: 40px;
   }
 
   .nav-bar-responsive {
@@ -2629,13 +2591,13 @@ html[lang="en"] .panel-title::before {
     cursor: pointer;
   }
   .header-left {
-    height: 57px;
+    height: 46px;
     display: flex;
     align-items: flex-end;
   }
   .header-left img {
-    width: 87px;
-    height: 39px;
+    width: 70px;
+    height: 30px;
   }
   .menu {
     display: flex;
@@ -3031,7 +2993,7 @@ html[lang="en"] .panel-title::before {
     /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); */
     opacity: 0;
   }
-   .kadi-Administration {
+  .kadi-Administration {
     border-radius: 40px;
     width: 100%;
     height: auto;
@@ -3043,7 +3005,7 @@ html[lang="en"] .panel-title::before {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   padding: 5px 1px;
+    padding: 5px 1px;
     gap: 20px;
   }
   .kadi-Administration-title__text {
@@ -3099,7 +3061,7 @@ html[lang="en"] .panel-title::before {
     top: -20px;
     left: 2px;
   }
-  
+
   .menu-text {
     font-size: 12px;
   }
@@ -3107,53 +3069,7 @@ html[lang="en"] .panel-title::before {
     width: 28px;
     height: 20px;
   }
- 
-  .arrow-icon {
-    width: 30px;
-    height: 30px;
-    color: black;
-  }
-  #theme-switch {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid rgb(57, 23, 85);
-    background-color: var(--bg-scroll);
-    border-radius: 50%;
-    color: var(--color-white);
 
-    padding: 1px;
-    inset-inline-start: 465px;
-    transition: all 0.3s ease;
-    z-index: 100000;
-    text-decoration: none;
-  }
-  html[lang="en"] #theme-switch {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid rgb(57, 23, 85);
-    background-color: var(--bg-scroll);
-    border-radius: 50%;
-    color: var(--color-white);
-
-    padding: 1px;
-
-    transition: all 0.3s ease;
-    z-index: 100000;
-    text-decoration: none;
-  }
-  #theme-switch:hover {
-    border: 3px solid rgb(37, 10, 59);
-    background-color: var(--bg-scroll-hover);
-    border-radius: 50%;
-    color: var(--color-white);
-    cursor: pointer;
-  }
   .panel-title {
     padding: 17px 32px;
     position: relative;
@@ -3164,6 +3080,39 @@ html[lang="en"] .panel-title::before {
 }
 
 @media (max-width: 320px) {
+  /* زر تغيير الثيم */
+  #theme-switch {
+    width: 36px;
+    height: 36px;
+    gap: 4px;
+  }
+
+  #theme-switch svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* قائمة اللغة */
+  .language-select-kadi {
+    padding: 3px 8px;
+    gap: 4px;
+    font-size: 11px;
+    min-width: 90px; /* يضمن أن القائمة تظهر بشكل جيد */
+  }
+
+  .language-icon .iconify-icon {
+    font-size: 14px;
+  }
+
+  .lan {
+    font-size: 11px;
+    padding-right: 10px;
+  }
+
+  .language-select-kadi::after {
+    font-size: 9px;
+    margin-inline-start: 3px;
+  }
   .responsive-navbar {
   }
   .nav-bar-responsive-btn {
@@ -3181,14 +3130,7 @@ html[lang="en"] .panel-title::before {
   .header-right-kadi {
     display: none;
   }
-  .header {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto;
-    margin-top: 40px;
-  }
+
   .booking-card {
     width: 82%;
     max-width: 245px;
@@ -4006,7 +3948,7 @@ html[lang="en"] .panel-title::before {
     font-size: 11px;
     font-weight: 700;
   }
- 
+
   .arrowup {
     display: grid;
     justify-items: center;
@@ -4019,40 +3961,6 @@ html[lang="en"] .panel-title::before {
     width: 30px;
     height: 30px;
     color: black;
-  }
-  #theme-switch {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid rgb(57, 23, 85);
-    background-color: var(--bg-scroll);
-    border-radius: 50%;
-    color: var(--color-white);
-
-    padding: 1px;
-    inset-inline-start: 465px;
-    transition: all 0.3s ease;
-    z-index: 100000;
-    text-decoration: none;
-  }
-  html[lang="en"] #theme-switch {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid rgb(57, 23, 85);
-    background-color: var(--bg-scroll);
-    border-radius: 50%;
-    color: var(--color-white);
-
-    padding: 1px;
-
-    transition: all 0.3s ease;
-    z-index: 100000;
-    text-decoration: none;
   }
 }
 html {
