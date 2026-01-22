@@ -80,6 +80,8 @@ h1.animate {
     transition: all 0.3s ease;
     padding-inline: 12px;
     margin-inline: 0px;
+    z-index: 1001;
+    position: relative;
 }
 #theme-switch:hover {
   transform: translateY(-2px) scale(1.05);
@@ -205,7 +207,7 @@ body.noscroll {
   transition: all 0.4s ease;
   position: sticky;
   top: 20px;
-  z-index: 999;
+  z-index:3;
   gap: 2px;
 }
 
@@ -322,23 +324,24 @@ body.noscroll {
   height: 59.971153259277344px;
 }
 .responsive-navbar {
+  position: fixed; /* مهم */
+  top: 0;          /* يبقى فوق الشاشة مهما كان scroll */
   left: 0;
-  bottom: 0;
   width: 100%;
   height: 100vh;
 
   transform: translateY(100%);
   transition: transform 0.5s ease-in-out;
 
-  /* display: none; */
-  /* transition: all 0.7s ease-in; */
   overflow: hidden;
   z-index: 1000;
+  background: rgba(111, 79, 197, 0.95); /* مثال خلفية */
 }
+
 .responsive-navbar.active {
-  transition: transform 0.5s ease-in-out;
   transform: translateY(0);
 }
+
 .nav-bar-responsive {
   display: none;
 }
@@ -544,6 +547,7 @@ html[lang="en"] .kadi-home-content h1 {
   border-radius: 40px;
   margin-inline: auto;
   overflow: hidden;
+  z-index: -8;
 }
 html[lang="en"] .hero {
   width: 100%;
@@ -635,32 +639,32 @@ html[lang="en"] .hero {
 /* مواقع العناصر */
 .s-more {
   right: 10px;
-  z-index: 1;
+  z-index: -5;
   opacity: 0;
 }
 .s-massage {
   right: 65px;
-  z-index: 2;
+  z-index: -4;
   opacity: 0;
 }
 .s-makeup {
   right: 120px;
-  z-index: 3;
+  z-index: -3;
   opacity: 0;
 }
 .s-care {
   right: 175px;
-  z-index: 4;
+  z-index: -2;
   opacity: 0;
 }
 .s-nails {
   right: 230px;
-  z-index: 5;
+  z-index: -1;
   opacity: 0;
 }
 .s-hair {
   right: 285px;
-  z-index: 6;
+  z-index:0;
   opacity: 0;
 }
 html[lang="en"] .hero-services {
@@ -1217,7 +1221,7 @@ html[lang="en"] .hero-services {
   position: absolute;
   top: 64px;
   right: 110px;
-  z-index: 1000;
+  z-index: 2;
 }
 .booking-card {
   width: 245px;
@@ -2282,7 +2286,7 @@ html[lang="en"] .panel-title::before {
     position: absolute;
     top: 64px;
     right: 235px;
-    z-index: 1000;
+    /* z-index: 1000; */
   }
   .tab-right-down {
     width: 211px;
@@ -2804,33 +2808,27 @@ html[lang="en"] .panel-title::before {
   }
   .s-more {
     right: 80px;
-    z-index: 1;
-    opacity: 0;
+   
   }
   .s-massage {
     right: 110px;
-    z-index: 2;
-    opacity: 0;
+   
   }
   .s-makeup {
     right: 140px;
-    z-index: 3;
-    opacity: 0;
+  
   }
   .s-care {
     right: 170px;
-    z-index: 4;
-    opacity: 0;
+   
   }
   .s-nails {
     right: 200px;
-    z-index: 5;
-    opacity: 0;
+   
   }
   .s-hair {
     right: 227px;
-    z-index: 6;
-    opacity: 0;
+   
   }
   .hero-phone {
     display: none;
@@ -3053,7 +3051,7 @@ html[lang="en"] .panel-title::before {
     position: absolute;
     top: 64px;
     right: 3px;
-    z-index: 1000;
+    /* z-index: 1000; */
   }
   .tab-right-up {
     width: 211px;
@@ -3666,7 +3664,7 @@ html[lang="en"] .panel-title::before {
     position: absolute;
     top: 64px;
     right: 23px;
-    z-index: 1000;
+    /* z-index: 1000; */
   }
   .tab-right-down {
     width: 211px;

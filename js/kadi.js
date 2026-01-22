@@ -98,14 +98,12 @@ const langKadi = {
       "Managing your salon is now easier with one complete system for service providers",
     adminDesc:
       "At Kadi, we focus on developing beauty centers by offering innovative solutions and competitive services that ensure growth and higher quality in your business Discover system features",
-
     tabBookingText: "Appointment Scheduling",
-    tabBookingText_short: "A.s",
+    tabBookingText_short: "Appt. Sch...",
     tabReportsText: "Reports & Analytics",
-    tabReportsText_short: "R.a",
-    tabInvoicesText: "Electronic Invoices",
-    tabInvoicesText_short: "E.i",
-
+    tabReportsText_short: "Reports...",
+    tabInvoicesText: "E-Invoices",
+    tabInvoicesText_short: "E-Inv...",
     bookingTitle: "Appointment Scheduling",
     bookingSubTitle:
       "Use an integrated calendar to manage bookings with full control",
@@ -191,7 +189,7 @@ const langKadi = {
     responsiveSocialText: "تابعونا علي وسائل التواصل الأجتماعي",
     btntextdownload: "تحميل التطبيق",
     menutext: "القائمة",
-    
+
     linkabout: "حول",
     linkfeatures: "الميزات",
     linkservices: "مزودي الخدمات",
@@ -229,11 +227,11 @@ const langKadi = {
       "في كادي، نحرص على تطوير مراكز التجميل من خلال تقديم حلول مبتكرة وخدمات تنافسية تضمن لك نموًا وجودة أعلى في عملك. اكتشف مميزات النظام",
 
     tabBookingText: "جدولة المواعيد",
-    tabBookingText_short: "ج.م",
+    tabBookingText_short: "جدوله.الم...",
     tabReportsText: "إعداد التقارير والتحليلات",
-    tabReportsText_short: "ت.ق",
+    tabReportsText_short: "اعداد.التق...",
     tabInvoicesText: "الفواتير الإلكترونية",
-    tabInvoicesText_short: "ف.و",
+    tabInvoicesText_short: "الفواتير.الألك...",
     bookingTitle: "جدولة المواعيد",
     bookingSubTitle: "استخدم تقويمًا متكاملاً لإدارة الحجوزات والتحكم الكامل",
     bookingDesc:
@@ -312,9 +310,11 @@ const langKadi = {
   },
 };
 function updateLanguage(lang) {
-    document.getElementById('tabBookingText').textContent = translations[lang].tabBookingText;
-    document.getElementById('tabBookingText_short').textContent = translations[lang].tabBookingText_short;
-    // ... كرر لبقية العناصر
+  document.getElementById("tabBookingText").textContent =
+    translations[lang].tabBookingText;
+  document.getElementById("tabBookingText_short").textContent =
+    translations[lang].tabBookingText_short;
+  // ... كرر لبقية العناصر
 }
 let selectLangKadi = document.getElementById("selectkadilang");
 selectLangKadi.addEventListener("change", updateKadiLang);
@@ -387,24 +387,26 @@ pages.three.style.display = "flex";
 let opeen = document.getElementById("open");
 let closee = document.getElementById("close");
 let containerMenu = document.getElementById("responsive-nav-bar-page");
-let navbarRes = document.querySelector(".nav-bar-kadi");
+// let navbarRes = document.querySelector(".nav-bar-kadi");
 let linkNavv = document.querySelectorAll(".linknavbaerresponsive");
-
+let headernavbar = document.querySelector(".header");
 const body = document.body;
 containerMenu.style.maxHeight = "0px";
 
 closee.addEventListener("click", () => {
   containerMenu.classList.remove("active");
   containerMenu.style.maxHeight = "0px";
-  navbarRes.style.display = "block";
-  body.classList.remove("noscroll");
+  // navbarRes.style.display = "block";
+  // headernavbar.style.display = "flex";
+  body.classList.remove("noscroll");  
   themeSwitch.style.display = "flex";
 });
 linkNavv.forEach((link) => {
   link.addEventListener("click", () => {
     body.classList.remove("noscroll");
     containerMenu.style.maxHeight = "0px";
-    navbarRes.style.display = "block";
+    // navbarRes.style.display = "block";
+    // headernavbar.style.display = "flex";
     containerMenu.classList.add("active");
     themeSwitch.style.display = "flex";
   });
@@ -413,13 +415,15 @@ function toggleMenu() {
   if (containerMenu.style.maxHeight == "0px") {
     containerMenu.classList.add("active");
     containerMenu.style.maxHeight = "100vh";
-    navbarRes.style.display = "none";
+    // navbarRes.style.display = "none";
     themeSwitch.style.display = "none";
+    // headernavbar.style.display = "none";
     body.classList.add("noscroll");
   } else {
     containerMenu.style.maxHeight = "0px";
-    navbarRes.style.display = "block";
+    // navbarRes.style.display = "block";
     themeSwitch.style.display = "flex";
+    // headernavbar.style.display = "flex";
     body.classList.remove("noscroll");
   }
 }
@@ -507,11 +511,13 @@ document.getElementById("reportsBtn").addEventListener("click", function () {
     .getElementById("container-kadi")
     .scrollIntoView({ behavior: "smooth" });
 });
-document.getElementById("btn-install-app").addEventListener("click", function () {
-  document
-    .getElementById("tabReportsText")
-    .scrollIntoView({ behavior: "smooth" });
-});
+document
+  .getElementById("btn-install-app")
+  .addEventListener("click", function () {
+    document
+      .getElementById("tabReportsText")
+      .scrollIntoView({ behavior: "smooth" });
+  });
 // // اللغة الحالية (تقدر تغيّرها ديناميكي حسب موقعك)
 // let currentLang = 'ar';
 
